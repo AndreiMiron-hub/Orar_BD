@@ -17,13 +17,13 @@ namespace Orar_BD
                     default:
                     case "BazaDateOracle":
 
-                        //if (tipEntitate == typeof(Companie))
-                        //{
-                        //    return new AdministrareCompanii();
-                        //}
                         if (tipEntitate == typeof(Facultate))
                         {
                             return new AdministrareFacultati();
+                        }
+                        if (tipEntitate == typeof(Grupa))
+                        {
+                            return new AdministrareGrupe();
                         }
                         break;
 

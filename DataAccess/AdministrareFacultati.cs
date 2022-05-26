@@ -14,7 +14,7 @@ namespace DataAccess
         public List<Facultate> GetFacultati()
         {
             var result = new List<Facultate>();
-            var dsFacultati = SqlDBHelper.ExecuteDataSet("select * from facultati_ANDM", CommandType.Text);
+            var dsFacultati = SqlDBHelper.ExecuteDataSet("select * from facultati_andm", CommandType.Text);
 
             foreach (DataRow linieBD in dsFacultati.Tables[PRIMUL_TABEL].Rows)
             {

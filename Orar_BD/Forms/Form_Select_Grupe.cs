@@ -1,25 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using DataAccess;
+using ModelLibraries;
+
 
 namespace Orar_BD
 {
     public partial class Form_Select_Grupe : Form
     {
+        IStocareGrupe stocareGrupe = (IStocareGrupe)new StocareFactory().GetTipStocare(typeof(Grupa));
         public Form_Select_Grupe()
         {
             InitializeComponent();
         }
 
-        public Form_Select_Grupe(string numeFacultate)
+        public Form_Select_Grupe(int idFacultate)
         {
             InitializeComponent();
+            IncarcareGrupe(idFacultate);
         }
 
         private void ButtonBack_Click(object sender, EventArgs e)
@@ -43,6 +43,27 @@ namespace Orar_BD
                 this.Hide();
                 selectOF.ShowDialog();
             }
+        }
+
+        private void IncarcareGrupe(int idFacultate)
+        {
+            try
+            {
+                List<Grupa> facultati = stocareGrupe.GetGrupe();
+                if (facultati != null && facultati.Any())
+                {
+
+                    foreach (var item in facultati)
+                    {
+                        comboBoxGrupe.Items.Add(item.IdGrupa);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
+
         }
     }
 }

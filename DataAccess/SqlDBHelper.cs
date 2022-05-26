@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Oracle.ManagedDataAccess.Client;
+using System;
 using System.Configuration;
 using System.Data;
-using System.Data.OracleClient;
 
 namespace DataAccess
 {
@@ -48,7 +48,7 @@ namespace DataAccess
                     }
                     catch (OracleException ex)
                     {
-                        //salveaza exceptii in fisiere log
+                        Console.WriteLine(ex.Message);
                     }
                     return ds;
                 }
@@ -82,7 +82,7 @@ namespace DataAccess
                     }
                     catch (OracleException ex)
                     {
-                        //salveaza exceptii in fisiere log
+                        Console.WriteLine(ex.Message);
                     }
                 }
             }

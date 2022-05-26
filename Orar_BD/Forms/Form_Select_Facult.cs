@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using DataAccess;
 using ModelLibraries;
@@ -16,6 +11,8 @@ namespace Orar_BD
     public partial class Form_Select_Facult : Form
     {
         IStocareFacultati stocareFacultati = (IStocareFacultati)new StocareFactory().GetTipStocare(typeof(Facultate));
+        List<Facultate> facultati;
+
         public Form_Select_Facult()
         {
             InitializeComponent();
@@ -44,7 +41,12 @@ namespace Orar_BD
             }
             else
             {
-                using (Form_Select_Grupe startGF = new Form_Select_Grupe())
+                foreach (var item in facultati)
+                {
+                    if (comboBoxFacultati.SelectedItem == item.NumeFacultate)
+                        lblIdFacultate.Text = item.IdFacultate.ToString();
+                }
+                using (Form_Select_Grupe startGF = new Form_Select_Grupe(Convert.ToInt32(lblIdFacultate.Text)))
                 {
                     this.Hide();
                     startGF.ShowDialog();
@@ -56,7 +58,7 @@ namespace Orar_BD
         {
             try
             {
-                var facultati = stocareFacultati.GetFacultati();
+                facultati = stocareFacultati.GetFacultati();
                 if (facultati != null && facultati.Any())
                 {
 
@@ -72,5 +74,6 @@ namespace Orar_BD
             }
 
         }
+
     }
 }
