@@ -19,9 +19,6 @@ namespace DataAccess
             foreach (DataRow linieBD in dsFacultati.Tables[PRIMUL_TABEL].Rows)
             {
                 var facultate = new Facultate(linieBD);
-                //incarca entitatile aditionale
-                // AICI EXEMPLU DE FOEIGN KEY CRED !!!!
-                //masina.Companie = new AdministrareCompanii().GetCompanie(masina.IdCompanie);
                 result.Add(facultate);
             }
             return result;
