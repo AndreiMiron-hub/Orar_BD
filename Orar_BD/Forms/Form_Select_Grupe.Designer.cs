@@ -35,7 +35,7 @@
             this.ButtonExit = new System.Windows.Forms.Button();
             this.Button_Acces_Orar = new System.Windows.Forms.Button();
             this.Label_ID = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxGrupe = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_USV_Banner)).BeginInit();
             this.HeaderPanel.SuspendLayout();
             this.SuspendLayout();
@@ -124,14 +124,14 @@
             this.Label_ID.TabIndex = 22;
             this.Label_ID.Text = "Selecteaza grupa";
             // 
-            // comboBox1
+            // comboBoxGrupe
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(190, 461);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(220, 30);
-            this.comboBox1.TabIndex = 21;
+            this.comboBoxGrupe.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxGrupe.FormattingEnabled = true;
+            this.comboBoxGrupe.Location = new System.Drawing.Point(190, 461);
+            this.comboBoxGrupe.Name = "comboBoxGrupe";
+            this.comboBoxGrupe.Size = new System.Drawing.Size(220, 30);
+            this.comboBoxGrupe.TabIndex = 21;
             // 
             // Form_Select_Grupe
             // 
@@ -143,7 +143,7 @@
             this.Controls.Add(this.HeaderPanel);
             this.Controls.Add(this.Button_Acces_Orar);
             this.Controls.Add(this.Label_ID);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxGrupe);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Select_Grupe";
@@ -164,6 +164,6 @@
         private System.Windows.Forms.Button ButtonExit;
         private System.Windows.Forms.Button Button_Acces_Orar;
         private System.Windows.Forms.Label Label_ID;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxGrupe;
     }
 }
