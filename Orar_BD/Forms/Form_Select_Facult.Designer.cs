@@ -37,6 +37,7 @@
             this.comboBoxFacultati = new System.Windows.Forms.ComboBox();
             this.pictureBox_USV_Banner = new System.Windows.Forms.PictureBox();
             this.labelEroareSelect = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.HeaderPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_USV_Banner)).BeginInit();
             this.SuspendLayout();
@@ -147,12 +148,22 @@
             this.labelEroareSelect.Text = "SELECTATI O FACULTATE";
             this.labelEroareSelect.Visible = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(417, 474);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 16);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "label1";
+            // 
             // Form_Select_Facult
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(230)))));
             this.ClientSize = new System.Drawing.Size(600, 600);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.labelEroareSelect);
             this.Controls.Add(this.HeaderPanel);
             this.Controls.Add(this.Button_Acces_Grupe);
@@ -181,5 +192,6 @@
         private System.Windows.Forms.ComboBox comboBoxFacultati;
         private System.Windows.Forms.PictureBox pictureBox_USV_Banner;
         private System.Windows.Forms.Label labelEroareSelect;
+        private System.Windows.Forms.Label label1;
     }
 }
