@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="Curs.cs" />
     <Compile Include="Facultate.cs" />
+    <Compile Include="Grupa.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Data" />

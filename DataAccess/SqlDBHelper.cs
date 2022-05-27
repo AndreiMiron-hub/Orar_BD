@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Oracle.ManagedDataAccess.Client;
+using System;
 using System.Configuration;
 using System.Data;
-using System.Data.OracleClient;
 
 namespace DataAccess
 {
