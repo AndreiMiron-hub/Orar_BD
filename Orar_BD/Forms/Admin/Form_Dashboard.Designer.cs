@@ -148,8 +148,9 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(209, 50);
             this.button2.TabIndex = 15;
-            this.button2.Text = "Facultati";
+            this.button2.Text = "Grupe";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Button_Cursuri
             // 
@@ -168,6 +169,7 @@
             this.Button_Cursuri.TabIndex = 14;
             this.Button_Cursuri.Text = "Cursuri";
             this.Button_Cursuri.UseVisualStyleBackColor = false;
+            this.Button_Cursuri.Click += new System.EventHandler(this.Button_Cursuri_Click);
             // 
             // Button_Facultati
             // 

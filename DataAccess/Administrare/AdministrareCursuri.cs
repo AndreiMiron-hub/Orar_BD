@@ -1,6 +1,7 @@
 ﻿using ModelLibraries;
 using System;
 using System.Collections.Generic;
+using Oracle.DataAccess.Client;
 using System.Data;
 
 namespace DataAccess
@@ -19,14 +20,31 @@ namespace DataAccess
             foreach (DataRow linieBD in dsCursuri.Tables[PRIMUL_TABEL].Rows)
             {
                 var curs = new Curs(linieBD);
-                //incarca entitatile aditionale
-                // AICI EXEMPLU DE FOEIGN KEY CRED !!!!
-                //masina.Companie = new AdministrareCompanii().GetCompanie(masina.IdCompanie);
                 result.Add(curs);
             }
             return result;
         }
 
+        public List<Curs> GetCursuriByGrupa(int idGrupa, int idFacultate)
+        {
+            var result = new List<Curs>();
+
+            var dsCursuri = SqlDBHelper.ExecuteDataSet(
+                "select  c.IDCURS, c.IDFACULTATE, c.INTERVALORAR, c.SAPTAMANI, c.SALA, c.PROFESOR, c.TIP, c.NUMEMATERIE, c.NUMESCURT " +
+                "from cursuri_andm c, C_G_INTERMEDIAR_ANDM cg " +
+                "where c.idFacultate = :idFacultate AND c.idcurs = cg.idcurs AND cg.idgrupa = :idGrupa",
+                CommandType.Text,
+                new OracleParameter(":idFacultate", OracleDbType.Int32, idFacultate, ParameterDirection.Input),
+                new OracleParameter(":idGrupa", OracleDbType.Int32, idGrupa, ParameterDirection.Input)
+                );
+
+            foreach (DataRow linieBD in dsCursuri.Tables[PRIMUL_TABEL].Rows)
+            {
+                var curs = new Curs(linieBD);
+                result.Add(curs);
+            }
+            return result;
+        }
         public bool AddCurs(Curs m)
         {
             throw new NotImplementedException();

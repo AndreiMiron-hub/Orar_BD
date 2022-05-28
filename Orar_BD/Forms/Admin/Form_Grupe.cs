@@ -10,11 +10,20 @@ using System.Windows.Forms;
 
 namespace Orar_BD
 {
-    public partial class Form_Login : Form
+    public partial class Form_Grupe : Form
     {
-        public Form_Login()
+        public Form_Grupe()
         {
             InitializeComponent();
+        }
+
+        private void ButtonBack_Click(object sender, EventArgs e)
+        {
+            using (Form_Dashboard startF = new Form_Dashboard())
+            {
+                this.Hide();
+                startF.ShowDialog();
+            }
         }
 
         private void ButtonExit_Click(object sender, EventArgs e)
@@ -22,22 +31,9 @@ namespace Orar_BD
             Application.Exit();
         }
 
-        private void ButtonBack_Click(object sender, EventArgs e)
+        private void Button_Afisare_Click(object sender, EventArgs e)
         {
-            using (Form_Start startF = new Form_Start())
-            {
-                this.Hide();
-                startF.ShowDialog();
-            }
-        }
 
-        private void Button_Autentificare_Click(object sender, EventArgs e)
-        {
-            using (Form_Dashboard startF = new Form_Dashboard())
-            {
-                this.Hide();
-                startF.ShowDialog();
-            }
         }
     }
 }

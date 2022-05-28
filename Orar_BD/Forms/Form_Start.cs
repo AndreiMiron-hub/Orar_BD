@@ -1,17 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Orar_BD
 {
     public partial class Form_Start : Form
     {
+       
         public Form_Start()
         {
             InitializeComponent();
@@ -31,7 +25,7 @@ namespace Orar_BD
             }
         }
 
-        private void Button_Autentificare_Click(object sender, EventArgs e)
+        private void Button_Autentificare_Click_1(object sender, EventArgs e)
         {
             using (Form_Login form_login = new Form_Login())
             {

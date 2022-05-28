@@ -10,25 +10,30 @@ using System.Windows.Forms;
 
 namespace Orar_BD
 {
-    public partial class Form_Orar_Viz : Form
+    public partial class Form_Cursuri : Form
     {
-        public Form_Orar_Viz()
+        public Form_Cursuri()
         {
             InitializeComponent();
         }
 
         private void ButtonBack_Click(object sender, EventArgs e)
         {
-            using (Form_Select_Grupe selectGF = new Form_Select_Grupe())
+            using (Form_Dashboard startF = new Form_Dashboard())
             {
                 this.Hide();
-                selectGF.ShowDialog();
+                startF.ShowDialog();
             }
         }
 
         private void ButtonExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Button_Afisare_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

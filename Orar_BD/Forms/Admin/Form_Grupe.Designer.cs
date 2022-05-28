@@ -1,6 +1,6 @@
 ﻿namespace Orar_BD
 {
-    partial class Form_Adm
+    partial class Form_Grupe
     {
         /// <summary>
         /// Required designer variable.
@@ -28,33 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Adm));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Grupe));
             this.HeaderPanel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ButtonBack = new System.Windows.Forms.Button();
             this.ButtonExit = new System.Windows.Forms.Button();
-            this.dataGridDashboard = new System.Windows.Forms.DataGridView();
             this.panel_Dash_Menu = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelMeniu = new System.Windows.Forms.Label();
             this.Button_Sterge = new System.Windows.Forms.Button();
             this.Button_Modificare = new System.Windows.Forms.Button();
             this.Button_Adaugare = new System.Windows.Forms.Button();
             this.Button_Afisare = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.dataGridDashboard = new System.Windows.Forms.DataGridView();
             this.HeaderPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridDashboard)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_Dash_Menu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridDashboard)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::Orar_BD.Properties.Resources.Sigla_USV_Banner_2;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Location = new System.Drawing.Point(23, -3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(553, 123);
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
             // 
             // HeaderPanel
             // 
@@ -66,7 +56,17 @@
             this.HeaderPanel.Location = new System.Drawing.Point(0, 0);
             this.HeaderPanel.Name = "HeaderPanel";
             this.HeaderPanel.Size = new System.Drawing.Size(1150, 120);
-            this.HeaderPanel.TabIndex = 11;
+            this.HeaderPanel.TabIndex = 16;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Orar_BD.Properties.Resources.Sigla_USV_Banner_2;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.Location = new System.Drawing.Point(23, -3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(553, 123);
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
             // ButtonBack
             // 
@@ -102,44 +102,32 @@
             this.ButtonExit.UseVisualStyleBackColor = true;
             this.ButtonExit.Click += new System.EventHandler(this.ButtonExit_Click);
             // 
-            // dataGridDashboard
-            // 
-            this.dataGridDashboard.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(230)))));
-            this.dataGridDashboard.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridDashboard.Location = new System.Drawing.Point(242, 181);
-            this.dataGridDashboard.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridDashboard.Name = "dataGridDashboard";
-            this.dataGridDashboard.RowHeadersWidth = 51;
-            this.dataGridDashboard.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridDashboard.Size = new System.Drawing.Size(895, 461);
-            this.dataGridDashboard.TabIndex = 13;
-            // 
             // panel_Dash_Menu
             // 
             this.panel_Dash_Menu.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panel_Dash_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(46)))), ((int)(((byte)(84)))));
-            this.panel_Dash_Menu.Controls.Add(this.label1);
+            this.panel_Dash_Menu.Controls.Add(this.labelMeniu);
             this.panel_Dash_Menu.Controls.Add(this.Button_Sterge);
             this.panel_Dash_Menu.Controls.Add(this.Button_Modificare);
             this.panel_Dash_Menu.Controls.Add(this.Button_Adaugare);
             this.panel_Dash_Menu.Controls.Add(this.Button_Afisare);
-            this.panel_Dash_Menu.Location = new System.Drawing.Point(0, 118);
+            this.panel_Dash_Menu.Location = new System.Drawing.Point(0, 116);
             this.panel_Dash_Menu.Name = "panel_Dash_Menu";
             this.panel_Dash_Menu.Size = new System.Drawing.Size(210, 686);
-            this.panel_Dash_Menu.TabIndex = 15;
+            this.panel_Dash_Menu.TabIndex = 18;
             // 
-            // label1
+            // labelMeniu
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.labelMeniu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(38, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 25);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "FACULTATI";
+            this.labelMeniu.AutoSize = true;
+            this.labelMeniu.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMeniu.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelMeniu.Location = new System.Drawing.Point(61, 30);
+            this.labelMeniu.Name = "labelMeniu";
+            this.labelMeniu.Size = new System.Drawing.Size(89, 25);
+            this.labelMeniu.TabIndex = 17;
+            this.labelMeniu.Text = "GRUPE";
             // 
             // Button_Sterge
             // 
@@ -214,41 +202,53 @@
             this.Button_Afisare.UseVisualStyleBackColor = false;
             this.Button_Afisare.Click += new System.EventHandler(this.Button_Afisare_Click);
             // 
-            // Form_Adm
+            // dataGridDashboard
+            // 
+            this.dataGridDashboard.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(230)))));
+            this.dataGridDashboard.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridDashboard.Location = new System.Drawing.Point(242, 179);
+            this.dataGridDashboard.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridDashboard.Name = "dataGridDashboard";
+            this.dataGridDashboard.RowHeadersWidth = 51;
+            this.dataGridDashboard.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridDashboard.Size = new System.Drawing.Size(895, 461);
+            this.dataGridDashboard.TabIndex = 17;
+            // 
+            // Form_Grupe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(230)))));
             this.ClientSize = new System.Drawing.Size(1150, 800);
-            this.Controls.Add(this.panel_Dash_Menu);
             this.Controls.Add(this.HeaderPanel);
+            this.Controls.Add(this.panel_Dash_Menu);
             this.Controls.Add(this.dataGridDashboard);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form_Adm";
+            this.Name = "Form_Grupe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form_Orar_Adm";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Text = "Form_Grupe";
             this.HeaderPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridDashboard)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel_Dash_Menu.ResumeLayout(false);
             this.panel_Dash_Menu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridDashboard)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel HeaderPanel;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button ButtonBack;
         private System.Windows.Forms.Button ButtonExit;
-        private System.Windows.Forms.DataGridView dataGridDashboard;
         private System.Windows.Forms.Panel panel_Dash_Menu;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelMeniu;
         private System.Windows.Forms.Button Button_Sterge;
         private System.Windows.Forms.Button Button_Modificare;
         private System.Windows.Forms.Button Button_Adaugare;
         private System.Windows.Forms.Button Button_Afisare;
+        private System.Windows.Forms.DataGridView dataGridDashboard;
     }
 }

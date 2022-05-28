@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Configuration;
 using System.Data;
-using System.Data.OracleClient;
+using Oracle.DataAccess.Client;
 
 namespace DataAccess
 {
@@ -44,11 +44,13 @@ namespace DataAccess
 
                     try
                     {
+                        Console.WriteLine(cmd.CommandText);
                         new OracleDataAdapter(cmd).Fill(ds);
+                        
                     }
                     catch (OracleException ex)
                     {
-                        //salveaza exceptii in fisiere log
+                        Console.WriteLine(ex.Message);
                     }
                     return ds;
                 }

@@ -25,6 +25,18 @@ namespace Orar_BD
                         {
                             return new AdministrareFacultati();
                         }
+                        if (tipEntitate == typeof(Grupa))
+                        {
+                            return new AdministrareGrupe();
+                        }
+                        if (tipEntitate == typeof(Curs))
+                        {
+                            return new AdministrareCursuri();
+                        }
+                        if (tipEntitate == typeof(Cont))
+                        {
+                            return new AdministrareConturi();
+                        }
                         break;
 
                     case "BIN":

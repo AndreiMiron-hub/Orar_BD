@@ -65,70 +65,88 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\Admin\Form_Cursuri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Form_Cursuri.Designer.cs">
+      <DependentUpon>Form_Cursuri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\Form_Grupe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Form_Grupe.Designer.cs">
+      <DependentUpon>Form_Grupe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Form_Start.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Form_Start.Designer.cs">
       <DependentUpon>Form_Start.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form_Adm.cs">
+    <Compile Include="Forms\Admin\Form_Facultati.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form_Adm.Designer.cs">
-      <DependentUpon>Form_Adm.cs</DependentUpon>
+    <Compile Include="Forms\Admin\Form_Facultati.Designer.cs">
+      <DependentUpon>Form_Facultati.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form_Login.cs">
+    <Compile Include="Forms\Admin\Form_Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form_Login.Designer.cs">
+    <Compile Include="Forms\Admin\Form_Login.Designer.cs">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form_Orar_Viz.cs">
+    <Compile Include="Forms\Vizitator\Form_Orar_Viz.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form_Orar_Viz.Designer.cs">
+    <Compile Include="Forms\Vizitator\Form_Orar_Viz.Designer.cs">
       <DependentUpon>Form_Orar_Viz.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form_Select_Facult.cs">
+    <Compile Include="Forms\Vizitator\Form_Select_Facult.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form_Select_Facult.Designer.cs">
+    <Compile Include="Forms\Vizitator\Form_Select_Facult.Designer.cs">
       <DependentUpon>Form_Select_Facult.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form_Select_Grupe.cs">
+    <Compile Include="Forms\Vizitator\Form_Select_Grupe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form_Select_Grupe.Designer.cs">
+    <Compile Include="Forms\Vizitator\Form_Select_Grupe.Designer.cs">
       <DependentUpon>Form_Select_Grupe.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form_Dashboard.cs">
+    <Compile Include="Forms\Admin\Form_Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form_Dashboard.Designer.cs">
+    <Compile Include="Forms\Admin\Form_Dashboard.Designer.cs">
       <DependentUpon>Form_Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StocareFactory.cs" />
+    <EmbeddedResource Include="Forms\Admin\Form_Cursuri.resx">
+      <DependentUpon>Form_Cursuri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\Form_Grupe.resx">
+      <DependentUpon>Form_Grupe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form_Start.resx">
       <DependentUpon>Form_Start.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_Adm.resx">
-      <DependentUpon>Form_Adm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Admin\Form_Facultati.resx">
+      <DependentUpon>Form_Facultati.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_Login.resx">
+    <EmbeddedResource Include="Forms\Admin\Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_Orar_Viz.resx">
+    <EmbeddedResource Include="Forms\Vizitator\Form_Orar_Viz.resx">
       <DependentUpon>Form_Orar_Viz.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_Select_Facult.resx">
+    <EmbeddedResource Include="Forms\Vizitator\Form_Select_Facult.resx">
       <DependentUpon>Form_Select_Facult.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_Select_Grupe.resx">
+    <EmbeddedResource Include="Forms\Vizitator\Form_Select_Grupe.resx">
       <DependentUpon>Form_Select_Grupe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_Dashboard.resx">
+    <EmbeddedResource Include="Forms\Admin\Form_Dashboard.resx">
       <DependentUpon>Form_Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

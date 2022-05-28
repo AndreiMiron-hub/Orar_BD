@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DataAccess;
+using ModelLibraries;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,8 @@ namespace Orar_BD
 {
     public partial class Form_Dashboard : Form
     {
+        IStocareFacultati stocareFacultati = (IStocareFacultati)new StocareFactory().GetTipStocare(typeof(Facultate));
+
         public Form_Dashboard()
         {
             InitializeComponent();
@@ -48,6 +52,46 @@ namespace Orar_BD
                 this.Hide();
                 startF.ShowDialog();
                 
+            }
+        }
+
+        private List<Facultate> IncarcareFacultati()
+        {
+            List<Facultate> empty = new List<Facultate>();
+            try
+            {
+                var facultati = stocareFacultati.GetFacultati();
+                if (facultati != null && facultati.Any())
+                {
+
+                   
+                }
+                return facultati;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+
+            }
+            return empty;
+
+        }
+
+        private void Button_Cursuri_Click(object sender, EventArgs e)
+        {
+            using (Form_Cursuri startF = new Form_Cursuri())
+            {
+                this.Hide();
+                startF.ShowDialog();
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            using (Form_Grupe startF = new Form_Grupe())
+            {
+                this.Hide();
+                startF.ShowDialog();
             }
         }
     }

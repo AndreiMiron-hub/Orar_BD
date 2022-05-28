@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using DataAccess;
 using ModelLibraries;
@@ -16,10 +11,11 @@ namespace Orar_BD
     public partial class Form_Select_Facult : Form
     {
         IStocareFacultati stocareFacultati = (IStocareFacultati)new StocareFactory().GetTipStocare(typeof(Facultate));
+        List<Facultate> listFac = new List<Facultate>();
         public Form_Select_Facult()
         {
             InitializeComponent();
-            IncarcareFacultati();
+            listFac = IncarcareFacultati();
         }
 
         private void ButtonExit_Click(object sender, EventArgs e)
@@ -44,7 +40,16 @@ namespace Orar_BD
             }
             else
             {
-                using (Form_Select_Grupe startGF = new Form_Select_Grupe())
+                if(listFac.Count > 0)
+                {
+                    foreach (var item in listFac)
+                    {
+                        if (item.NumeFacultate == comboBoxFacultati.SelectedItem)
+                            lblIndexFac.Text = item.IdFacultate.ToString();
+                    }
+                }
+                int id = int.Parse(lblIndexFac.Text);
+                using (Form_Select_Grupe startGF = new Form_Select_Grupe(id)) 
                 {
                     this.Hide();
                     startGF.ShowDialog();
@@ -52,8 +57,9 @@ namespace Orar_BD
             }
         }
 
-        private void IncarcareFacultati()
+        private List<Facultate> IncarcareFacultati()
         {
+            List<Facultate> empty = new List<Facultate>(); 
             try
             {
                 var facultati = stocareFacultati.GetFacultati();
@@ -65,11 +71,14 @@ namespace Orar_BD
                         comboBoxFacultati.Items.Add(item.NumeFacultate);
                     }
                 }
+                return facultati;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString());
+                
             }
+            return empty;
 
         }
     }

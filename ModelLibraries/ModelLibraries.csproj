@@ -39,8 +39,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cont.cs" />
     <Compile Include="Curs.cs" />
     <Compile Include="Facultate.cs" />
+    <Compile Include="Grupa.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Data" />
