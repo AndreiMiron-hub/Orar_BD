@@ -33,7 +33,7 @@ namespace DataAccess
             var result = new List<Grupa>();
 
             var dsGrupe = SqlDBHelper.ExecuteDataSet("select * from grupe_andm where IdFacultate = :IdFacultate", CommandType.Text,
-                new OracleParameter(":IdMaterie", OracleDbType.Int32, idFacultate, ParameterDirection.Input));
+                new OracleParameter(":IdFacultate", OracleDbType.Int32, idFacultate, ParameterDirection.Input));
 
             foreach (DataRow linieBD in dsGrupe.Tables[PRIMUL_TABEL].Rows)
             {
