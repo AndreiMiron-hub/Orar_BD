@@ -76,5 +76,23 @@ namespace Orar_BD
             return empty;
 
         }
+
+        private void Button_Cursuri_Click(object sender, EventArgs e)
+        {
+            using (Form_Cursuri startF = new Form_Cursuri())
+            {
+                this.Hide();
+                startF.ShowDialog();
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            using (Form_Grupe startF = new Form_Grupe())
+            {
+                this.Hide();
+                startF.ShowDialog();
+            }
+        }
     }
 }
