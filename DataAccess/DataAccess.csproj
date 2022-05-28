@@ -48,13 +48,13 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdministrareCursuri.cs" />
-    <Compile Include="AdministrareFacultati.cs" />
-    <Compile Include="AdministrareGrupe.cs" />
-    <Compile Include="IStocareCursuri.cs" />
-    <Compile Include="IStocareFactory.cs" />
-    <Compile Include="IStocareFacultati.cs" />
-    <Compile Include="IStocareGrupe.cs" />
+    <Compile Include="Administrare\AdministrareCursuri.cs" />
+    <Compile Include="Administrare\AdministrareFacultati.cs" />
+    <Compile Include="Administrare\AdministrareGrupe.cs" />
+    <Compile Include="Interfete\IStocareCursuri.cs" />
+    <Compile Include="Interfete\IStocareFactory.cs" />
+    <Compile Include="Interfete\IStocareFacultati.cs" />
+    <Compile Include="Interfete\IStocareGrupe.cs" />
     <Compile Include="SqlDBHelper.cs" />
   </ItemGroup>
   <ItemGroup>
