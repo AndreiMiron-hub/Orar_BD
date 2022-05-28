@@ -33,6 +33,10 @@ namespace Orar_BD
                         {
                             return new AdministrareCursuri();
                         }
+                        if (tipEntitate == typeof(Cont))
+                        {
+                            return new AdministrareConturi();
+                        }
                         break;
 
                     case "BIN":

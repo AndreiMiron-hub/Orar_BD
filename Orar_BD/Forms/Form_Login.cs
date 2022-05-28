@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DataAccess;
+using ModelLibraries;
+using System;
 using System.Windows.Forms;
 
 namespace Orar_BD
 {
     public partial class Form_Login : Form
     {
+        IStocareConturi stocareConturi = (IStocareConturi)new StocareFactory().GetTipStocare(typeof(Cont));
         public Form_Login()
         {
             InitializeComponent();
@@ -33,10 +29,45 @@ namespace Orar_BD
 
         private void Button_Autentificare_Click(object sender, EventArgs e)
         {
-            using (Form_Dashboard startF = new Form_Dashboard())
+            bool completatNume = false, completatParola = false;
+            if (String.IsNullOrEmpty(textBoxNume.Text))
             {
-                this.Hide();
-                startF.ShowDialog();
+                lblErrorNume.Visible = true;
+                labelErrorLogin.Visible = false;
+                
+            }
+            if (String.IsNullOrEmpty(textBoxParola.Text))
+                {
+                    labelErrorParola.Visible = true;
+                    labelErrorLogin.Visible = false;
+                }
+            if (!String.IsNullOrEmpty(textBoxNume.Text))
+            {
+                lblErrorNume.Visible = false;
+                labelErrorLogin.Visible = false;
+                completatNume = true;
+            }
+            if (!String.IsNullOrEmpty(textBoxParola.Text))
+            {
+                labelErrorParola.Visible = false;
+                labelErrorLogin.Visible = false;
+                completatParola = true;
+            }
+            if(completatNume && completatParola)
+            {
+                string numeUtilizator = textBoxNume.Text, parola = textBoxParola.Text;
+                if (stocareConturi.CheckCont(numeUtilizator, parola))
+                    using (Form_Dashboard startF = new Form_Dashboard())
+                    {
+                        this.Hide();
+                        startF.ShowDialog();
+                    }
+                else
+                {
+                    labelErrorLogin.Visible = true;
+                    lblErrorNume.Visible = false;
+                    labelErrorParola.Visible = false;
+                }
             }
         }
     }

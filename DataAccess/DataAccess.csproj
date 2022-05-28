@@ -48,9 +48,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrare\AdministrareConturi.cs" />
     <Compile Include="Administrare\AdministrareCursuri.cs" />
     <Compile Include="Administrare\AdministrareFacultati.cs" />
     <Compile Include="Administrare\AdministrareGrupe.cs" />
+    <Compile Include="Interfete\IStocareConturi.cs" />
     <Compile Include="Interfete\IStocareCursuri.cs" />
     <Compile Include="Interfete\IStocareFactory.cs" />
     <Compile Include="Interfete\IStocareFacultati.cs" />

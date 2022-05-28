@@ -34,10 +34,13 @@
             this.ButtonExit = new System.Windows.Forms.Button();
             this.Label_Pass = new System.Windows.Forms.Label();
             this.Label_ID = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxParola = new System.Windows.Forms.TextBox();
             this.textBoxNume = new System.Windows.Forms.TextBox();
             this.Button_Autentificare = new System.Windows.Forms.Button();
             this.pictureBox_USV_Banner = new System.Windows.Forms.PictureBox();
+            this.lblErrorNume = new System.Windows.Forms.Label();
+            this.labelErrorParola = new System.Windows.Forms.Label();
+            this.labelErrorLogin = new System.Windows.Forms.Label();
             this.HeaderPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_USV_Banner)).BeginInit();
             this.SuspendLayout();
@@ -91,7 +94,7 @@
             // 
             this.Label_Pass.AutoSize = true;
             this.Label_Pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_Pass.Location = new System.Drawing.Point(205, 455);
+            this.Label_Pass.Location = new System.Drawing.Point(205, 488);
             this.Label_Pass.Name = "Label_Pass";
             this.Label_Pass.Size = new System.Drawing.Size(68, 25);
             this.Label_Pass.TabIndex = 20;
@@ -107,14 +110,16 @@
             this.Label_ID.TabIndex = 18;
             this.Label_ID.Text = "Nume utilizator";
             // 
-            // textBox1
+            // textBoxParola
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(205, 485);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(190, 29);
-            this.textBox1.TabIndex = 19;
+            this.textBoxParola.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.textBoxParola.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxParola.Location = new System.Drawing.Point(205, 516);
+            this.textBoxParola.MaxLength = 18;
+            this.textBoxParola.Name = "textBoxParola";
+            this.textBoxParola.PasswordChar = '*';
+            this.textBoxParola.Size = new System.Drawing.Size(190, 29);
+            this.textBoxParola.TabIndex = 19;
             // 
             // textBoxNume
             // 
@@ -135,7 +140,7 @@
             this.Button_Autentificare.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button_Autentificare.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_Autentificare.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(204)))), ((int)(((byte)(209)))));
-            this.Button_Autentificare.Location = new System.Drawing.Point(160, 540);
+            this.Button_Autentificare.Location = new System.Drawing.Point(160, 580);
             this.Button_Autentificare.Margin = new System.Windows.Forms.Padding(1);
             this.Button_Autentificare.Name = "Button_Autentificare";
             this.Button_Autentificare.Size = new System.Drawing.Size(280, 50);
@@ -154,16 +159,55 @@
             this.pictureBox_USV_Banner.TabIndex = 17;
             this.pictureBox_USV_Banner.TabStop = false;
             // 
+            // lblErrorNume
+            // 
+            this.lblErrorNume.AutoSize = true;
+            this.lblErrorNume.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorNume.ForeColor = System.Drawing.Color.Red;
+            this.lblErrorNume.Location = new System.Drawing.Point(207, 454);
+            this.lblErrorNume.Name = "lblErrorNume";
+            this.lblErrorNume.Size = new System.Drawing.Size(201, 20);
+            this.lblErrorNume.TabIndex = 21;
+            this.lblErrorNume.Text = "COMPLETATI CAMPUL *";
+            this.lblErrorNume.Visible = false;
+            // 
+            // labelErrorParola
+            // 
+            this.labelErrorParola.AutoSize = true;
+            this.labelErrorParola.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelErrorParola.ForeColor = System.Drawing.Color.Red;
+            this.labelErrorParola.Location = new System.Drawing.Point(206, 548);
+            this.labelErrorParola.Name = "labelErrorParola";
+            this.labelErrorParola.Size = new System.Drawing.Size(201, 20);
+            this.labelErrorParola.TabIndex = 22;
+            this.labelErrorParola.Text = "COMPLETATI CAMPUL *";
+            this.labelErrorParola.Visible = false;
+            // 
+            // labelErrorLogin
+            // 
+            this.labelErrorLogin.AutoSize = true;
+            this.labelErrorLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelErrorLogin.ForeColor = System.Drawing.Color.Red;
+            this.labelErrorLogin.Location = new System.Drawing.Point(178, 548);
+            this.labelErrorLogin.Name = "labelErrorLogin";
+            this.labelErrorLogin.Size = new System.Drawing.Size(247, 20);
+            this.labelErrorLogin.TabIndex = 23;
+            this.labelErrorLogin.Text = "NUME SAU PAROLA GRESITA";
+            this.labelErrorLogin.Visible = false;
+            // 
             // Form_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(230)))));
-            this.ClientSize = new System.Drawing.Size(600, 600);
+            this.ClientSize = new System.Drawing.Size(600, 650);
+            this.Controls.Add(this.labelErrorLogin);
+            this.Controls.Add(this.labelErrorParola);
+            this.Controls.Add(this.lblErrorNume);
             this.Controls.Add(this.HeaderPanel);
             this.Controls.Add(this.Label_Pass);
             this.Controls.Add(this.Label_ID);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxParola);
             this.Controls.Add(this.textBoxNume);
             this.Controls.Add(this.Button_Autentificare);
             this.Controls.Add(this.pictureBox_USV_Banner);
@@ -186,9 +230,12 @@
         private System.Windows.Forms.Button ButtonExit;
         private System.Windows.Forms.Label Label_Pass;
         private System.Windows.Forms.Label Label_ID;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxParola;
         private System.Windows.Forms.TextBox textBoxNume;
         private System.Windows.Forms.Button Button_Autentificare;
         private System.Windows.Forms.PictureBox pictureBox_USV_Banner;
+        private System.Windows.Forms.Label lblErrorNume;
+        private System.Windows.Forms.Label labelErrorParola;
+        private System.Windows.Forms.Label labelErrorLogin;
     }
 }
