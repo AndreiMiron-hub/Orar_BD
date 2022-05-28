@@ -15,10 +15,13 @@ namespace Orar_BD
     public partial class Form_Adm : Form
     {
         IStocareFacultati stocareFacultati = (IStocareFacultati)new StocareFactory().GetTipStocare(typeof(Facultate));
-
+        List<Facultate> listFac = new List<Facultate>();
+    
         public Form_Adm()
         {
             InitializeComponent();
+            listFac = IncarcareFacultati();
+
         }
 
         private void ButtonExit_Click(object sender, EventArgs e)
@@ -35,34 +38,7 @@ namespace Orar_BD
             }
         }
 
-        private void Button_Afisare_Facultati_Click(object sender, EventArgs e)
-        {
-            
-            try
-            {
-                List<Facultate> facultati = stocareFacultati.GetFacultati();
-                if (facultati != null && facultati.Any())
-                {
-                    dataGridDashboard.DataSource = facultati.Select(m => new { m.IdFacultate, m.NumeFacultate }).ToList();
-
-                    dataGridDashboard.Columns["IdFacultate"].Visible = true;
-                    dataGridDashboard.Columns["IdFacultate"].HeaderText = "ID";
-                    dataGridDashboard.Columns["NumeFacultate"].HeaderText = "Facultate";
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString());
-            }
-        }
-
         private void Button_Afisare_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void AfiseazaFacultati()
         {
             try
             {
@@ -78,7 +54,38 @@ namespace Orar_BD
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString());
+
             }
+        }
+
+
+        private List<Facultate> IncarcareFacultati()
+        {
+            List<Facultate> empty = new List<Facultate>();
+            try
+            {
+                var facultati = stocareFacultati.GetFacultati();
+                if (facultati != null && facultati.Any())
+                {
+                    dataGridDashboard.DataSource = facultati.Select(m => new { m.IdFacultate, m.NumeFacultate }).ToList();
+
+                    dataGridDashboard.Columns["IdFacultate"].Visible = false;
+                    dataGridDashboard.Columns["NumeFacultate"].HeaderText = "Facultate";
+                }
+                return facultati;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+
+            }
+            return empty;
+
+        }
+
+        private void Button_Adaugare_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

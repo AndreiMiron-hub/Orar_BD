@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Adm));
             this.HeaderPanel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ButtonBack = new System.Windows.Forms.Button();
             this.ButtonExit = new System.Windows.Forms.Button();
             this.dataGridDashboard = new System.Windows.Forms.DataGridView();
@@ -39,11 +41,10 @@
             this.Button_Modificare = new System.Windows.Forms.Button();
             this.Button_Adaugare = new System.Windows.Forms.Button();
             this.Button_Afisare = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.HeaderPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDashboard)).BeginInit();
             this.panel_Dash_Menu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // HeaderPanel
@@ -57,6 +58,16 @@
             this.HeaderPanel.Name = "HeaderPanel";
             this.HeaderPanel.Size = new System.Drawing.Size(1150, 120);
             this.HeaderPanel.TabIndex = 11;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Orar_BD.Properties.Resources.Sigla_USV_Banner_2;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.Location = new System.Drawing.Point(23, -3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(553, 123);
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
             // ButtonBack
             // 
@@ -94,7 +105,12 @@
             // 
             // dataGridDashboard
             // 
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridDashboard.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridDashboard.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridDashboard.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridDashboard.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(230)))));
+            this.dataGridDashboard.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridDashboard.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridDashboard.Location = new System.Drawing.Point(242, 181);
             this.dataGridDashboard.Margin = new System.Windows.Forms.Padding(4);
@@ -184,6 +200,7 @@
             this.Button_Adaugare.TabIndex = 14;
             this.Button_Adaugare.Text = "Adauga";
             this.Button_Adaugare.UseVisualStyleBackColor = false;
+            this.Button_Adaugare.Click += new System.EventHandler(this.Button_Adaugare_Click);
             // 
             // Button_Afisare
             // 
@@ -204,16 +221,6 @@
             this.Button_Afisare.UseVisualStyleBackColor = false;
             this.Button_Afisare.Click += new System.EventHandler(this.Button_Afisare_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::Orar_BD.Properties.Resources.Sigla_USV_Banner_2;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Location = new System.Drawing.Point(23, -3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(553, 123);
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            // 
             // Form_Adm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -229,10 +236,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_Facultati";
             this.HeaderPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDashboard)).EndInit();
             this.panel_Dash_Menu.ResumeLayout(false);
             this.panel_Dash_Menu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
