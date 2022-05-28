@@ -92,7 +92,6 @@
             this.Button_Autentificare.TabIndex = 22;
             this.Button_Autentificare.Text = "Autentificare";
             this.Button_Autentificare.UseVisualStyleBackColor = false;
-            this.Button_Autentificare.Click += new System.EventHandler(this.Button_Autentificare_Click);
             // 
             // Button_Orar
             // 

@@ -44,7 +44,9 @@ namespace DataAccess
 
                     try
                     {
+                        Console.WriteLine(cmd.CommandText);
                         new OracleDataAdapter(cmd).Fill(ds);
+                        
                     }
                     catch (OracleException ex)
                     {
