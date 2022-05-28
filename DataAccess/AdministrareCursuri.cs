@@ -20,9 +20,6 @@ namespace DataAccess
             foreach (DataRow linieBD in dsCursuri.Tables[PRIMUL_TABEL].Rows)
             {
                 var curs = new Curs(linieBD);
-                //incarca entitatile aditionale
-                // AICI EXEMPLU DE FOEIGN KEY CRED !!!!
-                //masina.Companie = new AdministrareCompanii().GetCompanie(masina.IdCompanie);
                 result.Add(curs);
             }
             return result;
