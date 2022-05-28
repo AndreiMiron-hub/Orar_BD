@@ -120,6 +120,7 @@
             this.textBoxParola.PasswordChar = '*';
             this.textBoxParola.Size = new System.Drawing.Size(190, 29);
             this.textBoxParola.TabIndex = 19;
+            this.textBoxParola.Text = "1234";
             // 
             // textBoxNume
             // 
@@ -129,6 +130,7 @@
             this.textBoxNume.Name = "textBoxNume";
             this.textBoxNume.Size = new System.Drawing.Size(190, 29);
             this.textBoxNume.TabIndex = 14;
+            this.textBoxNume.Text = "admin";
             // 
             // Button_Autentificare
             // 

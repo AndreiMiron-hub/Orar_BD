@@ -60,13 +60,15 @@
             this.HeaderPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox_Back_Choice = new System.Windows.Forms.GroupBox();
-            this.radioButton_Select_Grupe = new System.Windows.Forms.RadioButton();
             this.radioButton_Dashboard = new System.Windows.Forms.RadioButton();
+            this.radioButton_Select_Grupe = new System.Windows.Forms.RadioButton();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel_Legenda.SuspendLayout();
             this.tableLayoutPanel_Orar.SuspendLayout();
             this.HeaderPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox_Back_Choice.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label16
@@ -539,6 +541,7 @@
             // HeaderPanel
             // 
             this.HeaderPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(46)))), ((int)(((byte)(84)))));
+            this.HeaderPanel.Controls.Add(this.pictureBox2);
             this.HeaderPanel.Controls.Add(this.pictureBox1);
             this.HeaderPanel.Controls.Add(this.ButtonBack);
             this.HeaderPanel.Controls.Add(this.ButtonExit);
@@ -568,6 +571,16 @@
             this.groupBox_Back_Choice.TabStop = false;
             this.groupBox_Back_Choice.Visible = false;
             // 
+            // radioButton_Dashboard
+            // 
+            this.radioButton_Dashboard.AutoSize = true;
+            this.radioButton_Dashboard.Location = new System.Drawing.Point(11, 38);
+            this.radioButton_Dashboard.Name = "radioButton_Dashboard";
+            this.radioButton_Dashboard.Size = new System.Drawing.Size(17, 16);
+            this.radioButton_Dashboard.TabIndex = 1;
+            this.radioButton_Dashboard.TabStop = true;
+            this.radioButton_Dashboard.UseVisualStyleBackColor = true;
+            // 
             // radioButton_Select_Grupe
             // 
             this.radioButton_Select_Grupe.AutoSize = true;
@@ -578,15 +591,15 @@
             this.radioButton_Select_Grupe.TabStop = true;
             this.radioButton_Select_Grupe.UseVisualStyleBackColor = true;
             // 
-            // radioButton_Dashboard
+            // pictureBox2
             // 
-            this.radioButton_Dashboard.AutoSize = true;
-            this.radioButton_Dashboard.Location = new System.Drawing.Point(11, 38);
-            this.radioButton_Dashboard.Name = "radioButton_Dashboard";
-            this.radioButton_Dashboard.Size = new System.Drawing.Size(17, 16);
-            this.radioButton_Dashboard.TabIndex = 1;
-            this.radioButton_Dashboard.TabStop = true;
-            this.radioButton_Dashboard.UseVisualStyleBackColor = true;
+            this.pictureBox2.BackgroundImage = global::Orar_BD.Properties.Resources.Sigla_USV_Banner_2;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox2.Location = new System.Drawing.Point(23, -3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(553, 123);
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
             // 
             // Form_Orar_Viz
             // 
@@ -611,6 +624,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox_Back_Choice.ResumeLayout(false);
             this.groupBox_Back_Choice.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -650,5 +664,6 @@
         private System.Windows.Forms.GroupBox groupBox_Back_Choice;
         private System.Windows.Forms.RadioButton radioButton_Dashboard;
         private System.Windows.Forms.RadioButton radioButton_Select_Grupe;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

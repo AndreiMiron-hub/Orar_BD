@@ -85,7 +85,18 @@ namespace Orar_BD
 
         private void Button_Adaugare_Click(object sender, EventArgs e)
         {
+            using (Form_Adauga_Facultate startF = new Form_Adauga_Facultate())
+            {
+                startF.ShowDialog();
+            }
+        }
 
+        private void Button_Modificare_Click(object sender, EventArgs e)
+        {
+            using (Form_Modifica_Facultate startF = new Form_Modifica_Facultate())
+            {
+                startF.ShowDialog();
+            }
         }
     }
 }

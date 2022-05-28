@@ -65,16 +65,34 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\Admin\Form_Cursuri.cs">
+    <Compile Include="Forms\Admin\Curs\Form_Adauga_Curs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Admin\Form_Cursuri.Designer.cs">
+    <Compile Include="Forms\Admin\Curs\Form_Adauga_Curs.designer.cs">
+      <DependentUpon>Form_Adauga_Curs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\Curs\Form_Cursuri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Curs\Form_Cursuri.Designer.cs">
       <DependentUpon>Form_Cursuri.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Admin\Form_Grupe.cs">
+    <Compile Include="Forms\Admin\Facultate\Form_Adauga_Facultate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Admin\Form_Grupe.Designer.cs">
+    <Compile Include="Forms\Admin\Facultate\Form_Adauga_Facultate.Designer.cs">
+      <DependentUpon>Form_Adauga_Facultate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\Facultate\Form_Modifica_Facultate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Facultate\Form_Modifica_Facultate.Designer.cs">
+      <DependentUpon>Form_Modifica_Facultate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\Grupa\Form_Grupe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Grupa\Form_Grupe.Designer.cs">
       <DependentUpon>Form_Grupe.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Form_Start.cs">
@@ -83,10 +101,10 @@
     <Compile Include="Forms\Form_Start.Designer.cs">
       <DependentUpon>Form_Start.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Admin\Form_Facultati.cs">
+    <Compile Include="Forms\Admin\Facultate\Form_Facultati.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Admin\Form_Facultati.Designer.cs">
+    <Compile Include="Forms\Admin\Facultate\Form_Facultati.Designer.cs">
       <DependentUpon>Form_Facultati.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Admin\Form_Login.cs">
@@ -122,16 +140,25 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StocareFactory.cs" />
-    <EmbeddedResource Include="Forms\Admin\Form_Cursuri.resx">
+    <EmbeddedResource Include="Forms\Admin\Curs\Form_Adauga_Curs.resx">
+      <DependentUpon>Form_Adauga_Curs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\Curs\Form_Cursuri.resx">
       <DependentUpon>Form_Cursuri.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Admin\Form_Grupe.resx">
+    <EmbeddedResource Include="Forms\Admin\Facultate\Form_Adauga_Facultate.resx">
+      <DependentUpon>Form_Adauga_Facultate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\Facultate\Form_Modifica_Facultate.resx">
+      <DependentUpon>Form_Modifica_Facultate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\Grupa\Form_Grupe.resx">
       <DependentUpon>Form_Grupe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form_Start.resx">
       <DependentUpon>Form_Start.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Admin\Form_Facultati.resx">
+    <EmbeddedResource Include="Forms\Admin\Facultate\Form_Facultati.resx">
       <DependentUpon>Form_Facultati.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin\Form_Login.resx">
@@ -189,5 +216,6 @@
   <ItemGroup>
     <None Include="Asstets\Sigla_USV_Banner_2.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
