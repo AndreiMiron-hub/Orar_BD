@@ -30,7 +30,7 @@ namespace DataAccess
             var result = new List<Curs>();
 
             var dsCursuri = SqlDBHelper.ExecuteDataSet(
-                "select  c.IDCURS, c.IDFACULTATE, c.INTERVALORAR, c.SAPTAMANI, c.SALA, c.PROFESOR, c.TIP " +
+                "select  c.IDCURS, c.IDFACULTATE, c.INTERVALORAR, c.SAPTAMANI, c.SALA, c.PROFESOR, c.TIP, c.NUMEMATERIE, c.NUMESCURT " +
                 "from cursuri_andm c, C_G_INTERMEDIAR_ANDM cg " +
                 "where c.idFacultate = :idFacultate AND c.idcurs = cg.idcurs AND cg.idgrupa = :idGrupa",
                 CommandType.Text,

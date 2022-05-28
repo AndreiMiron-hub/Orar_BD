@@ -11,8 +11,11 @@ namespace ModelLibraries
         public string Saptamani { get; set; }
         public string Profesor { get; set; }
         public string Tip { get; set; }
+        public string NumeMaterie { get; set; }
+        public string NumeScurt { get; set; }
+        
 
-        public Curs(int idCurs, int idFacultate, string invervalOrar, string saptamani, string profesor, string tip)
+        public Curs(int idCurs, int idFacultate, string invervalOrar, string saptamani, string profesor, string tip, string numeMaterie, string numeScurt)
         {
             IdCurs = idCurs;
             IdFacultate = idFacultate;
@@ -20,6 +23,8 @@ namespace ModelLibraries
             Saptamani = saptamani;
             Profesor = profesor;
             Tip = tip;
+            NumeMaterie = numeMaterie;
+            NumeScurt = numeScurt;
         }
 
         public Curs(DataRow linieBD)
@@ -30,6 +35,8 @@ namespace ModelLibraries
             Saptamani = linieBD["Saptamani"].ToString();
             Profesor = linieBD["Profesor"].ToString();
             Tip = linieBD["Tip"].ToString();
+            NumeMaterie = linieBD["NumeMaterie"].ToString();
+            NumeScurt = linieBD["NumeScurt"].ToString();
         }
     }
 }
