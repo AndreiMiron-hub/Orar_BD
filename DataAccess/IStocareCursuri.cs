@@ -10,7 +10,9 @@ namespace DataAccess
     public interface IStocareCursuri : IStocareFactory
     {
         List<Curs> GetCursuri();
+        List<Curs> GetCursuriByGrupa(int idGrupa, int idFacultate);
         Curs GetCurs(int id);
+
         bool AddCurs(Curs m);
 
         bool UpdateCurs(Curs m);

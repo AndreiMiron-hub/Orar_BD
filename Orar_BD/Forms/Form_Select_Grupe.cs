@@ -11,6 +11,8 @@ namespace Orar_BD
     public partial class Form_Select_Grupe : Form
     {
         IStocareGrupe stocareGrupe = (IStocareGrupe)new StocareFactory().GetTipStocare(typeof(Grupa));
+        int idFacultate, idGrupa;
+        List<Grupa> listGrupa = new List<Grupa>();
         public Form_Select_Grupe()
         {
             InitializeComponent();
@@ -19,7 +21,8 @@ namespace Orar_BD
         public Form_Select_Grupe(int id)
         {
             InitializeComponent();
-            IncarcareGrupe(id);
+            idFacultate = id;
+            listGrupa = IncarcareGrupe(id);
         }
 
         private void ButtonBack_Click(object sender, EventArgs e)
@@ -38,10 +41,29 @@ namespace Orar_BD
 
         private void Button_Acces_Orar_Click(object sender, EventArgs e)
         {
-            using (Form_Orar_Viz selectOF = new Form_Orar_Viz())
+            if (comboBoxGrupe.SelectedItem == null)
             {
-                this.Hide();
-                selectOF.ShowDialog();
+                labelEroareSelect.Visible = true;
+            }
+            else
+            {
+                if (listGrupa.Count > 0)
+                {
+                    foreach (var item in listGrupa)
+                    { 
+                        if (item.IdGrupa.ToString() == comboBoxGrupe.SelectedItem.ToString())
+                        {
+                            lblIdGrupa.Text = item.IdGrupa.ToString();
+                            lblIdFac.Text = idFacultate.ToString();
+                        }
+                    }
+                }
+                idGrupa = int.Parse(lblIdGrupa.Text);
+                using (Form_Orar_Viz selectOF = new Form_Orar_Viz(idGrupa, idFacultate))
+                {
+                    this.Hide();
+                    selectOF.ShowDialog();
+                }
             }
         }
 

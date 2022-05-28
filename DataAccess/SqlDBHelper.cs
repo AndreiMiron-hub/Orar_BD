@@ -48,7 +48,7 @@ namespace DataAccess
                     }
                     catch (OracleException ex)
                     {
-                        //salveaza exceptii in fisiere log
+                        Console.WriteLine(ex.Message);
                     }
                     return ds;
                 }

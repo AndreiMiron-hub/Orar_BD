@@ -1,6 +1,7 @@
 ﻿using ModelLibraries;
 using System;
 using System.Collections.Generic;
+using Oracle.DataAccess.Client;
 using System.Data;
 
 namespace DataAccess
@@ -27,6 +28,21 @@ namespace DataAccess
             return result;
         }
 
+        public List<Curs> GetCursuriByGrupa(int idGrupa, int idFacultate)
+        {
+            var result = new List<Curs>();
+
+            var dsCursuri = SqlDBHelper.ExecuteDataSet("select c.IDCURS, c.IDFACULTATE, c.INTERVALORAR, c.SAPTAMANI, c.SALA, c.PROFESOR, c.TIP, c.NUMEMATERIE, c.NUMESCURT " +
+                                                       "from cursuri_andm c, C_G_INTERMEDIAR_ANDM cg " +
+                                                       $"where c.idfacultate = {idFacultate} AND c.idcurs = cg.idcurs and cg.idgrupa = {idGrupa}; ", CommandType.Text);
+
+            foreach (DataRow linieBD in dsCursuri.Tables[PRIMUL_TABEL].Rows)
+            {
+                var curs = new Curs(linieBD);
+                result.Add(curs);
+            }
+            return result;
+        }
         public bool AddCurs(Curs m)
         {
             throw new NotImplementedException();
