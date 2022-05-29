@@ -94,7 +94,14 @@ namespace Orar_BD
 
         private void Button_Modificare_Click(object sender, EventArgs e)
         {
-            using (Form_Modifica_Facultate startF = new Form_Modifica_Facultate())
+            Facultate facultate = GetFacultateDataGrid();
+            if (facultate == null) return;
+
+            DialogResult dialogResult = MessageBox.Show("Esti sigur ca vrei sa modifici facultatea?", "Mesaj de confirmare", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.No)
+                return;
+
+            using (Form_Modifica_Facultate startF = new Form_Modifica_Facultate(facultate))
             {
                 startF.ShowDialog();
             }

@@ -57,7 +57,11 @@ namespace DataAccess
 
         public bool UpdateFacultate(Facultate m)
         {
-            throw new NotImplementedException();
+            return SqlDBHelper.ExecuteNonQuery(
+                "UPDATE facultati_andm set numeFacultate = :numeFacultate where idFacultate= :idFacultate", CommandType.Text,
+                new OracleParameter(":numeFacultate", OracleDbType.Varchar2, m.NumeFacultate, ParameterDirection.Input),
+                new OracleParameter(":idFacultate", OracleDbType.Int32, m.IdFacultate, ParameterDirection.Input)
+            );
         }
 
         public bool DeleteFacultate(Facultate m)
