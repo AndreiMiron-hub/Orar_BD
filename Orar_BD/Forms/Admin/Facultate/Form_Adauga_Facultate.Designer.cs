@@ -137,6 +137,7 @@
             this.ButtonAdaugaFacultate.TabIndex = 42;
             this.ButtonAdaugaFacultate.Text = "Adauga";
             this.ButtonAdaugaFacultate.UseVisualStyleBackColor = false;
+            this.ButtonAdaugaFacultate.Click += new System.EventHandler(this.ButtonAdaugaFacultate_Click);
             // 
             // HeaderPanel
             // 

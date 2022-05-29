@@ -15,6 +15,7 @@ namespace Orar_BD
     public partial class Form_Adm : Form
     {
         IStocareFacultati stocareFacultati = (IStocareFacultati)new StocareFactory().GetTipStocare(typeof(Facultate));
+        private const int PRIMA_COLOANA = 0;
         List<Facultate> listFac = new List<Facultate>();
     
         public Form_Adm()
@@ -96,6 +97,46 @@ namespace Orar_BD
             using (Form_Modifica_Facultate startF = new Form_Modifica_Facultate())
             {
                 startF.ShowDialog();
+            }
+        }
+
+        private void Button_Sterge_Click(object sender, EventArgs e)
+        {
+            Facultate facultate = GetFacultateDataGrid();
+            if (facultate == null) return;
+
+            DialogResult dialogResult = MessageBox.Show("Esti sigur ca vrei sa elimini facultatea?", "Mesaj de confirmare", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.No)
+                return;
+
+            var result = stocareFacultati.DeleteFacultate(facultate);
+
+            if (result == true)
+            {
+                IncarcareFacultati();
+                MessageBox.Show($"Facultatea: {facultate.NumeFacultate} a fost stearsa cu succes");
+            }
+
+        }
+
+
+        private Facultate GetFacultateDataGrid()
+        {
+            try
+            {
+                var currentCell = dataGridDashboard.CurrentCell;
+                if (currentCell == null)
+                {
+                    MessageBox.Show("Selectati o facultate din tabel");
+                    return null;
+                }
+                int idFacultate = Convert.ToInt32(dataGridDashboard[PRIMA_COLOANA, currentCell.RowIndex].Value);
+
+                return stocareFacultati.GetFacultate(idFacultate);
+            }
+            catch (Exception)
+            {
+                throw;
             }
         }
     }

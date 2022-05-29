@@ -15,6 +15,12 @@ namespace ModelLibraries
             NumeFacultate = numeFacultate;
         }
 
+        public Facultate(string numeFacultate)
+        {
+            IdFacultate = 0;
+            NumeFacultate = numeFacultate;
+        }
+
         public Facultate(DataRow linieBD)
         {
             IdFacultate = Convert.ToInt32(linieBD["idFacultate"].ToString());

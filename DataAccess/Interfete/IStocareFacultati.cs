@@ -10,5 +10,7 @@ namespace DataAccess
         bool AddFacultate(Facultate m);
 
         bool UpdateFacultate(Facultate m);
+        bool DeleteFacultate(Facultate m);
+        bool ValideazaExistentaFacultate(Facultate facultate);
     }
 }
