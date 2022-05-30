@@ -16,15 +16,15 @@ namespace Orar_BD
     {
         IStocareFacultati stocareFacultati = (IStocareFacultati)new StocareFactory().GetTipStocare(typeof(Facultate));
         private const int PRIMA_COLOANA = 0;
-        List<Facultate> listFac = new List<Facultate>();
     
         public Form_Adm()
         {
             InitializeComponent();
-            listFac = IncarcareFacultati();
+            IncarcareFacultati();
 
         }
 
+        #region Functionalitate Butoane
         private void ButtonExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -41,48 +41,10 @@ namespace Orar_BD
 
         private void Button_Afisare_Click(object sender, EventArgs e)
         {
-            try
-            {
-                var facultati = stocareFacultati.GetFacultati();
-                if (facultati != null && facultati.Any())
-                {
-                    dataGridDashboard.DataSource = facultati.Select(m => new { m.IdFacultate, m.NumeFacultate }).ToList();
-
-                    dataGridDashboard.Columns["IdFacultate"].Visible = false;
-                    dataGridDashboard.Columns["NumeFacultate"].HeaderText = "Facultate";
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString());
-
-            }
+            IncarcareFacultati();
         }
 
 
-        private List<Facultate> IncarcareFacultati()
-        {
-            List<Facultate> empty = new List<Facultate>();
-            try
-            {
-                var facultati = stocareFacultati.GetFacultati();
-                if (facultati != null && facultati.Any())
-                {
-                    dataGridDashboard.DataSource = facultati.Select(m => new { m.IdFacultate, m.NumeFacultate }).ToList();
-
-                    dataGridDashboard.Columns["IdFacultate"].Visible = false;
-                    dataGridDashboard.Columns["NumeFacultate"].HeaderText = "Facultate";
-                }
-                return facultati;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString());
-
-            }
-            return empty;
-
-        }
 
         private void Button_Adaugare_Click(object sender, EventArgs e)
         {
@@ -125,7 +87,31 @@ namespace Orar_BD
             }
 
         }
+        #endregion
+        #region Helper Methods
+        private List<Facultate> IncarcareFacultati()
+        {
+            List<Facultate> empty = new List<Facultate>();
+            try
+            {
+                var facultati = stocareFacultati.GetFacultati();
+                if (facultati != null && facultati.Any())
+                {
+                    dataGridDashboard.DataSource = facultati.Select(m => new { m.IdFacultate, m.NumeFacultate }).ToList();
 
+                    dataGridDashboard.Columns["IdFacultate"].Visible = false;
+                    dataGridDashboard.Columns["NumeFacultate"].HeaderText = "Facultate";
+                }
+                return facultati;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+
+            }
+            return empty;
+
+        }
 
         private Facultate GetFacultateDataGrid()
         {
@@ -146,5 +132,6 @@ namespace Orar_BD
                 throw;
             }
         }
+        #endregion
     }
 }

@@ -8,8 +8,11 @@ namespace DataAccess
         List<Grupa> GetGrupe();
         List<Grupa> GetGrupeByFaculty(int idFacultate);
         Grupa GetGrupa(int id);
-        bool AddGrupa(Grupa m);
+        List<Grupa> GetGrupeAfisare();
+        bool AddGrupa(Grupa g, Facultate f);
 
         bool UpdateGrupa(Grupa m);
+        bool DeleteGrupa(Grupa m);
+        bool ValideazaExistentaGrupa(Grupa grupa);
     }
 }

@@ -42,8 +42,25 @@ namespace DataAccess
         public Facultate GetFacultate(int id)
         {
             Facultate result = null;
-            var dsFacultate = SqlDBHelper.ExecuteDataSet("select * from facultati_ANDM where idFacultate = :idFacultate", CommandType.Text,
+            var dsFacultate = SqlDBHelper.ExecuteDataSet("select * from facultati_ANDM where idFacultate = :idFacultate", 
+                CommandType.Text,
                 new OracleParameter(":idFacultate", OracleDbType.Int32, id, ParameterDirection.Input)
+                );
+
+            if (dsFacultate.Tables[PRIMUL_TABEL].Rows.Count > 0)
+            {
+                DataRow linieBD = dsFacultate.Tables[PRIMUL_TABEL].Rows[PRIMA_LINIE];
+                result = new Facultate(linieBD);
+            }
+            return result;
+        }
+
+        public Facultate GetFacultateByName(string numeFacultate)
+        {
+            Facultate result = null;
+            var dsFacultate = SqlDBHelper.ExecuteDataSet("select * from facultati_ANDM where NUMEFACULTATE = :numeFacultate",
+                CommandType.Text,
+                new OracleParameter(":numeFacultate", OracleDbType.Varchar2, numeFacultate, ParameterDirection.Input)
                 );
 
             if (dsFacultate.Tables[PRIMUL_TABEL].Rows.Count > 0)

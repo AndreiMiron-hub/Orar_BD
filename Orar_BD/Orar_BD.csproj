@@ -90,11 +90,23 @@
     <Compile Include="Forms\Admin\Facultate\Form_Modifica_Facultate.Designer.cs">
       <DependentUpon>Form_Modifica_Facultate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Admin\Grupa\Form_Adauga_Grupa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Grupa\Form_Adauga_Grupa.Designer.cs">
+      <DependentUpon>Form_Adauga_Grupa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Admin\Grupa\Form_Grupe.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Admin\Grupa\Form_Grupe.Designer.cs">
       <DependentUpon>Form_Grupe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\Grupa\Form_Modifica_Grupa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Grupa\Form_Modifica_Grupa.Designer.cs">
+      <DependentUpon>Form_Modifica_Grupa.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Form_Start.cs">
       <SubType>Form</SubType>
@@ -153,8 +165,14 @@
     <EmbeddedResource Include="Forms\Admin\Facultate\Form_Modifica_Facultate.resx">
       <DependentUpon>Form_Modifica_Facultate.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\Grupa\Form_Adauga_Grupa.resx">
+      <DependentUpon>Form_Adauga_Grupa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin\Grupa\Form_Grupe.resx">
       <DependentUpon>Form_Grupe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\Grupa\Form_Modifica_Grupa.resx">
+      <DependentUpon>Form_Modifica_Grupa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form_Start.resx">
       <DependentUpon>Form_Start.cs</DependentUpon>

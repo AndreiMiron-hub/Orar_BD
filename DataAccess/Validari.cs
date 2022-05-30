@@ -28,7 +28,51 @@ namespace DataAccess
             return new ExitString(str.ToUpper(), "Succes");
         }
 
-       
+        public static ExitString ValideazaNumarGrupa(string str)
+        {
+            if (string.IsNullOrEmpty(str))
+                return new ExitString(null, "Campul nu trebuie sa fie gol");
+
+            str = str.Trim();
+
+            for (int i = 0; i < str.Length; i++)
+            {
+                if (!Char.IsDigit(str[i]) && i != str.Length - 1)
+                    return new ExitString(null, "Campul introdus are litere introduse gresit");
+            }
+
+            string caractereSpeciale;
+            if (SpecialChars(str, out caractereSpeciale))
+                return new ExitString(null, $"Campul introdus nu trebuie sa contina caractere speciale: {caractereSpeciale}");
+
+            return new ExitString(str.ToUpper(), "Succes");
+        }
+
+        public static ExitString ValideazaNumarStudenti(string str)
+        {
+            if (string.IsNullOrEmpty(str))
+                return new ExitString(null, "Campul nu trebuie sa fie gol");
+
+            str = str.Trim();
+
+            for (int i = 0; i < str.Length; i++)
+            {
+                if (!Char.IsDigit(str[i]) && i != str.Length - 1)
+                    return new ExitString(null, "Campul introdus are litere introduse gresit");
+            }
+
+            if(int.Parse(str) > 30)
+            {
+                return new ExitString(null, "Numarul de studenti este prea mare. Introduceti un numar mai mic de 30.");
+            }
+
+            string caractereSpeciale;
+            if (SpecialChars(str, out caractereSpeciale))
+                return new ExitString(null, $"Campul introdus nu trebuie sa contina caractere speciale: {caractereSpeciale}");
+
+            return new ExitString(str.ToUpper(), "Succes");
+        }
+      
 
 
         /// <summary>

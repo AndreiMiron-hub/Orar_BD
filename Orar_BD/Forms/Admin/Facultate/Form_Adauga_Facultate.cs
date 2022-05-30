@@ -66,6 +66,9 @@ namespace Orar_BD
             }
         }
 
+
+
+
         private Facultate ValideazaInformatii()
         {
             try
