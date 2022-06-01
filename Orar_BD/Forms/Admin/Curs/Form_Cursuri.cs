@@ -79,6 +79,9 @@ namespace Orar_BD
             if(comboBoxFacultati.Enabled == false)
             {
                 IncarcareCursuriFiltruGrupa();
+            } else if(comboBoxFacultati.Enabled == true && comboBoxFacultati.SelectedIndex != -1)
+            {
+                IncarcareCursuriFiltruFacultate();
             }
         }
 
@@ -118,6 +121,7 @@ namespace Orar_BD
             List<Curs> empty = new List<Curs>();
             try
             {
+                
                 var cursuri = stocareCursuri.GetCursuriByGrupa(int.Parse(comboBoxGrupe.SelectedItem.ToString()));
                 if (cursuri != null && cursuri.Any())
                 {
@@ -133,6 +137,49 @@ namespace Orar_BD
                     dataGridDashboard.Columns["Saptamani"].HeaderText = "Saptamani";
                 }
                 return cursuri;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+
+            }
+            return empty;
+
+        }
+
+        private List<Curs> IncarcareCursuriFiltruFacultate()
+        {
+            List<Curs> empty = new List<Curs>();
+            int idFac = 0;
+            try
+            {
+                foreach (var item in listaFacultati)
+                {
+                    if (item.NumeFacultate == comboBoxFacultati.SelectedItem.ToString())
+                        idFac = item.IdFacultate;
+
+                }
+                if (idFac != 0)
+                {
+                    List<Curs> cursuri = stocareCursuri.GetCursuriByFacultate(idFac);
+
+                    if (cursuri != null && cursuri.Any())
+                    {
+                        dataGridDashboard.DataSource = cursuri.Select(m => new { m.IdCurs, m.NumeMaterie, m.NumeScurt, m.IntervalOrar, m.Profesor, m.Sala, m.Saptamani, m.Tip }).ToList();
+
+                        dataGridDashboard.Columns["idCurs"].HeaderText = "ID Curs";
+                        dataGridDashboard.Columns["numeMaterie"].HeaderText = "Materie";
+                        dataGridDashboard.Columns["numeScurt"].HeaderText = "Acronim";
+                        dataGridDashboard.Columns["intervalOrar"].HeaderText = "Interval orar";
+                        dataGridDashboard.Columns["Profesor"].HeaderText = "Profesor";
+                        dataGridDashboard.Columns["Sala"].HeaderText = "Sala";
+                        dataGridDashboard.Columns["Tip"].HeaderText = "Tip";
+                        dataGridDashboard.Columns["Saptamani"].HeaderText = "Saptamani";
+                    }
+                    return cursuri;
+                }
+                else
+                    return empty;
             }
             catch (Exception ex)
             {

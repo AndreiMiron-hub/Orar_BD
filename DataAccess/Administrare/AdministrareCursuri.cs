@@ -65,6 +65,26 @@ namespace DataAccess
             }
             return result;
         }
+
+        public List<Curs> GetCursuriByFacultate(int idFacultate)
+        {
+            var result = new List<Curs>();
+
+            var dsCursuri = SqlDBHelper.ExecuteDataSet(
+                "select  c.IDCURS, c.IDFACULTATE, c.INTERVALORAR, c.SAPTAMANI, c.SALA, c.PROFESOR, c.TIP, c.NUMEMATERIE, c.NUMESCURT " +
+                "from cursuri_andm c " +
+                "where c.idFacultate = :idFacultate",
+                CommandType.Text,
+                new OracleParameter(":idFacultate", OracleDbType.Int32, idFacultate, ParameterDirection.Input)
+                );
+
+            foreach (DataRow linieBD in dsCursuri.Tables[PRIMUL_TABEL].Rows)
+            {
+                var curs = new Curs(linieBD);
+                result.Add(curs);
+            }
+            return result;
+        }
         public bool AddCurs(Curs m, Facultate f)
         {
              bool x = SqlDBHelper.ExecuteNonQuery(
@@ -124,10 +144,7 @@ namespace DataAccess
             );
         }
 
-        public List<Curs> GetCursuriByFacultate(int idFacultate)
-        {
-            throw new NotImplementedException();
-        }
+        
 
         public bool ValideazaExistentaCurs(Curs curs)
         {
