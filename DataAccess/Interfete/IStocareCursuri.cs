@@ -15,8 +15,9 @@ namespace DataAccess
         List<Curs> GetCursuriByFacultate(int idFacultate);
         Curs GetCurs(int id);
 
-        bool AddCurs(Curs m);
+        bool AddCurs(Curs m, Facultate f);
 
         bool UpdateCurs(Curs m);
+        bool ValideazaExistentaCurs(Curs curs);
     }
 }

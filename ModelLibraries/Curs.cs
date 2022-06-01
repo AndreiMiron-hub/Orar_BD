@@ -30,6 +30,18 @@ namespace ModelLibraries
             NumeMaterie = numeMaterie;
             NumeScurt = acronim(numeMaterie);
         }
+        public Curs( string numeMaterie, int idFacultate, string sala, string intervalOrar, string saptamani, string profesor, string tip)
+        {
+            IdCurs = 0;
+            IdFacultate = idFacultate;
+            IntervalOrar = intervalOrar;
+            Sala = sala;
+            Saptamani = saptamani;
+            Profesor = profesor;
+            Tip = tip;
+            NumeMaterie = numeMaterie;
+            NumeScurt = acronim(numeMaterie);
+        }
 
         public Curs(DataRow linieBD)
         {

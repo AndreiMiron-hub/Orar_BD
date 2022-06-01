@@ -45,7 +45,7 @@ namespace Orar_BD
 
         private void Button_Afisare_Click(object sender, EventArgs e)
         {
-
+            IncarcareCursuri();
         }
 
         private void Button_Adaugare_Click(object sender, EventArgs e)

@@ -40,26 +40,26 @@ namespace Orar_BD
                 if (curs == null)
                     return;
 
-                //if (stocareCursuri.ValideazaExistentaCurs(curs))
-                //{
-                //    MessageBox.Show("Materia exista deja in baza de date");
-                //    return;
-                //}
-
-               /* var rezultat = stocareCursuri.AddCurs(curs, facultate);
-                
-                if (rezultat == true)
+                if (stocareCursuri.ValideazaExistentaCurs(curs))
                 {
-                    // Displays the MessageBox.
-                    DialogResult dialog = MessageBox.Show("Grupa adaugata cu succes", "Feilcitari!", MessageBoxButtons.OK);
-                    if (dialog == DialogResult.OK)
-                    {
-                        // Closes the parent form.
-                        this.Close();
-                    }
+                    MessageBox.Show("Materia exista deja in baza de date");
+                    return;
                 }
 
-                */
+                 var rezultat = stocareCursuri.AddCurs(curs, facultate);
+
+                 if (rezultat == true)
+                 {
+                     // Displays the MessageBox.
+                     DialogResult dialog = MessageBox.Show("Curs adaugata cu succes", "Feilcitari!", MessageBoxButtons.OK);
+                     if (dialog == DialogResult.OK)
+                     {
+                         // Closes the parent form.
+                         this.Close();
+                     }
+                 }
+
+                
 
             }
             catch (Exception ex)
@@ -95,12 +95,12 @@ namespace Orar_BD
                     labelSaptamani.ForeColor = Color.Red;
                 }
 
-                var SalaValid = Validari.ValideazaDenumireFacultate(textBoxSala.Text);
-                if (string.IsNullOrEmpty(SalaValid.Text))
-                {
-                    mesajEroare.Append($"{labelSala.Text} : {SalaValid.Mesaj}\n");
-                    labelSala.ForeColor = Color.Red;
-                }
+                //var SalaValid = Validari.ValideazaDenumireFacultate(textBoxSala.Text);
+                //if (string.IsNullOrEmpty(SalaValid.Text))
+                //{
+                //    mesajEroare.Append($"{labelSala.Text} : {SalaValid.Mesaj}\n");
+                //    labelSala.ForeColor = Color.Red;
+                //}
 
                 var ProfesorValid = Validari.ValideazaDenumireFacultate(textBoxProfesor.Text);
                 if (string.IsNullOrEmpty(ProfesorValid.Text))
@@ -119,14 +119,15 @@ namespace Orar_BD
                 }
 
                 int idFac = 0;
-                /*foreach (var item in listaFacultati)
+                foreach (var item in listaFacultati)
                 {
-                    if (item.NumeFacultate == comboBoxFacultate.SelectedItem.ToString())
+                    if (item.NumeFacultate == comboBoxFacultati.SelectedItem.ToString())
                         idFac = item.IdFacultate;
                 }
+
                 if (idFac > 0)
-                    return new Curs(0, idFac, textBoxInceputIntervalOrar.Text, textBoxSaptamani.Text, textBoxProfesor.Text,  textBoxSala.Text, int.Parse(textBoxNumeCurs.Text), idFac);
-           */ }
+                    return new Curs(textBoxNumeCurs.Text, idFac, textBoxSala.Text, IntervalValid.Text,textBoxSaptamani.Text, textBoxProfesor.Text, comboBoxTip.SelectedItem.ToString());
+            }
             catch (Exception)
             {
                 MessageBox.Show("A aparut o problema la validarea informatiilor despre materie");

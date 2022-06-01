@@ -29,6 +29,7 @@ namespace DataAccess
             return new ExitString(str.ToUpper(), "Succes");
         }
 
+
         public static ExitString ValideazaInterval(string str1, string str2)
         {
             if (string.IsNullOrEmpty(str1))

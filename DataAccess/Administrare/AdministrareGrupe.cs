@@ -116,13 +116,6 @@ namespace DataAccess
             return dsGrupe.Tables[PRIMUL_TABEL].Rows.Count > 0 ? true : false;
         }
 
-        public bool ValideazaExistentaCurs(Curs curs)
-        {
-            var dsCursuri = SqlDBHelper.ExecuteDataSet(
-                $"SELECT * FROM cursuri_andm WHERE idCurs = '{curs.IdCurs}'",
-                CommandType.Text);
-
-            return dsCursuri.Tables[PRIMUL_TABEL].Rows.Count > 0 ? true : false;
-        }
+       
     }
 }
