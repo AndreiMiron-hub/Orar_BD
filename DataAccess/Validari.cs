@@ -2,6 +2,7 @@
 using System;
 using System.Data;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace DataAccess
 {
@@ -26,6 +27,35 @@ namespace DataAccess
                 return new ExitString(null, $"Campul introdus nu trebuie sa contina caractere speciale: {caractereSpeciale}");
 
             return new ExitString(str.ToUpper(), "Succes");
+        }
+
+        public static ExitString ValideazaInterval(string str1, string str2)
+        {
+            if (string.IsNullOrEmpty(str1))
+                return new ExitString(null, "Campul nu trebuie sa fie gol");
+            if (string.IsNullOrEmpty(str2))
+                return new ExitString(null, "Campul nu trebuie sa fie gol");
+            
+            str1 = str1.Trim();
+            str2 = str2.Trim();
+
+            if (!IsValidTime(str1))
+                return new ExitString(null, "Ora de start trebuie sa fie in format HH:MM");
+
+            if (!IsValidTime(str2))
+                return new ExitString(null, "Ora de sfarsit trebuie sa fie in format HH:MM");
+
+
+
+            return new ExitString(str1.ToUpper() + " : " + str2.ToUpper(), "Succes");
+        }
+
+        static public bool IsValidTime(string thetime)
+        {
+            Regex checktime =
+             new Regex(@"^(([0-1][0-9])|([2][0-3])):([0-5][0-9])");
+
+            return checktime.IsMatch(thetime);
         }
 
         public static ExitString ValideazaNumarGrupa(string str)
@@ -108,6 +138,8 @@ namespace DataAccess
             caractere = stringBuilder.ToString();
             return stringBuilder.Length > 0 ? true : false;
         }
+
+       
 
     }
 }

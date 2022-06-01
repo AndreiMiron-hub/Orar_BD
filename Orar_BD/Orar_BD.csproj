@@ -69,8 +69,14 @@
     <Compile Include="Forms\Admin\Curs\Form_Adauga_Curs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Admin\Curs\Form_Adauga_Curs.designer.cs">
+    <Compile Include="Forms\Admin\Curs\Form_Adauga_Curs.Designer.cs">
       <DependentUpon>Form_Adauga_Curs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\Curs\Form_Modifica_Curs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Curs\Form_Modifica_Curs.designer.cs">
+      <DependentUpon>Form_Modifica_Curs.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Admin\Curs\Form_Cursuri.cs">
       <SubType>Form</SubType>
@@ -155,6 +161,9 @@
     <Compile Include="StocareFactory.cs" />
     <EmbeddedResource Include="Forms\Admin\Curs\Form_Adauga_Curs.resx">
       <DependentUpon>Form_Adauga_Curs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\Curs\Form_Modifica_Curs.resx">
+      <DependentUpon>Form_Modifica_Curs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin\Curs\Form_Cursuri.resx">
       <DependentUpon>Form_Cursuri.cs</DependentUpon>

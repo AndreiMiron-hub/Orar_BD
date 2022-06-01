@@ -41,7 +41,7 @@ namespace Orar_BD
             List<Curs> empty = new List<Curs>();
             try
             {
-                var cursuri = stocareCursuri.GetCursuriByGrupa(idGrupa, idFacultate);
+                var cursuri = stocareCursuri.GetCursuriByGrupa(idGrupa);
                 if (cursuri != null && cursuri.Any())
                 {
 
