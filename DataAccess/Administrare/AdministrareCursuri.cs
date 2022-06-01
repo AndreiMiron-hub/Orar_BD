@@ -85,13 +85,43 @@ namespace DataAccess
 
         public Curs GetCurs(int id)
         {
-            throw new NotImplementedException();
+            Curs result = null;
+            var dsFacultate = SqlDBHelper.ExecuteDataSet("select * from cursuri_ANDM where idCurs = :idCurs",
+                CommandType.Text,
+                new OracleParameter(":idCurs", OracleDbType.Int32, id, ParameterDirection.Input)
+                );
+
+            if (dsFacultate.Tables[PRIMUL_TABEL].Rows.Count > 0)
+            {
+                DataRow linieBD = dsFacultate.Tables[PRIMUL_TABEL].Rows[PRIMA_LINIE];
+                result = new Curs(linieBD);
+            }
+            return result;
         }
 
 
         public bool UpdateCurs(Curs m)
         {
-            throw new NotImplementedException();
+            return SqlDBHelper.ExecuteNonQuery(
+                "UPDATE cursuri_andm set " +
+                "INTERVALORAR = :intervalOrar, " +
+                "SAPTAMANI = :saptamani, " +
+                "SALA =:sala, " +
+                "PROFESOR =:profesor, " +
+                "TIP =:tip, " +
+                "NUMEMATERIE =:numeMaterie, " +
+                "NUMESCURT = :numeScurt " +
+                "where IDCURS =:idCurs",
+                CommandType.Text,
+                new OracleParameter(":intervalOrar", OracleDbType.Varchar2, m.IntervalOrar, ParameterDirection.Input),
+                new OracleParameter(":saptamani", OracleDbType.Varchar2, m.Saptamani, ParameterDirection.Input),
+                new OracleParameter(":sala", OracleDbType.Varchar2, m.Sala, ParameterDirection.Input),
+                new OracleParameter(":profesor", OracleDbType.Varchar2, m.Profesor, ParameterDirection.Input),
+                new OracleParameter(":tip", OracleDbType.Varchar2, m.Tip, ParameterDirection.Input),
+                new OracleParameter(":numeMaterie", OracleDbType.Varchar2, m.NumeMaterie, ParameterDirection.Input),
+                new OracleParameter(":numeScurt", OracleDbType.Varchar2, m.NumeScurt, ParameterDirection.Input),
+                new OracleParameter(":idCurs", OracleDbType.Int32, m.IdCurs, ParameterDirection.Input)
+            );
         }
 
         public List<Curs> GetCursuriByFacultate(int idFacultate)
@@ -102,7 +132,7 @@ namespace DataAccess
         public bool ValideazaExistentaCurs(Curs curs)
         {
             var dsCursuri = SqlDBHelper.ExecuteDataSet(
-                $"SELECT * FROM cursuri_andm WHERE idCurs = '{curs.IdCurs}'",
+                $"SELECT * FROM cursuri_andm WHERE NUMEMATERIE = '{curs.NumeMaterie}'",
                 CommandType.Text);
 
             return dsCursuri.Tables[PRIMUL_TABEL].Rows.Count > 0 ? true : false;

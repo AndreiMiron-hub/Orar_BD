@@ -31,39 +31,43 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Modifica_Curs));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.labelIntervalStart = new System.Windows.Forms.Label();
+            this.textBoxFinalIntervalOrar = new System.Windows.Forms.TextBox();
+            this.textBoxInceputIntervalOrar = new System.Windows.Forms.TextBox();
+            this.labelIntervalOrar = new System.Windows.Forms.Label();
+            this.comboBoxTipuri = new System.Windows.Forms.ComboBox();
             this.labelTipNou = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBoxProfesorNou = new System.Windows.Forms.TextBox();
             this.labelProfesorNou = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBoxSalaNou = new System.Windows.Forms.TextBox();
             this.labelSalaNou = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBoxSaptamaniNou = new System.Windows.Forms.TextBox();
             this.labelSaptamaniNou = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.labelIntervalOrarNou = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBoxNumeCursNou = new System.Windows.Forms.TextBox();
             this.labelCursNou = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.labelTipVechi = new System.Windows.Forms.Label();
             this.labelAdaugaCursVechi = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxProfesor = new System.Windows.Forms.TextBox();
             this.labelProfesorVechi = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxSala = new System.Windows.Forms.TextBox();
             this.labelSalaVeche = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxSaptamani = new System.Windows.Forms.TextBox();
             this.labelSaptamaniVechi = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxIntervalOrar = new System.Windows.Forms.TextBox();
             this.labelIntervalOrarVechi = new System.Windows.Forms.Label();
             this.ButtonAnuleaza = new System.Windows.Forms.Button();
-            this.textBoxNumeFacultate = new System.Windows.Forms.TextBox();
+            this.textBoxNumeCurs = new System.Windows.Forms.TextBox();
             this.lblNumeCursVechi = new System.Windows.Forms.Label();
             this.lblModificaCurs = new System.Windows.Forms.Label();
-            this.ButtonAdaugaFacultate = new System.Windows.Forms.Button();
+            this.ButtonModificaCurs = new System.Windows.Forms.Button();
             this.HeaderPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ButtonExit = new System.Windows.Forms.Button();
             this.lblIndexFac = new System.Windows.Forms.Label();
+            this.textBoxTip = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.HeaderPanel.SuspendLayout();
@@ -86,52 +90,112 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(230)))));
-            this.panel2.Controls.Add(this.comboBox2);
+            this.panel2.Controls.Add(this.textBoxTip);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.labelIntervalStart);
+            this.panel2.Controls.Add(this.textBoxFinalIntervalOrar);
+            this.panel2.Controls.Add(this.textBoxInceputIntervalOrar);
+            this.panel2.Controls.Add(this.labelIntervalOrar);
+            this.panel2.Controls.Add(this.comboBoxTipuri);
             this.panel2.Controls.Add(this.labelTipNou);
-            this.panel2.Controls.Add(this.textBox5);
+            this.panel2.Controls.Add(this.textBoxProfesorNou);
             this.panel2.Controls.Add(this.labelProfesorNou);
-            this.panel2.Controls.Add(this.textBox6);
+            this.panel2.Controls.Add(this.textBoxSalaNou);
             this.panel2.Controls.Add(this.labelSalaNou);
-            this.panel2.Controls.Add(this.textBox7);
+            this.panel2.Controls.Add(this.textBoxSaptamaniNou);
             this.panel2.Controls.Add(this.labelSaptamaniNou);
-            this.panel2.Controls.Add(this.textBox8);
-            this.panel2.Controls.Add(this.labelIntervalOrarNou);
-            this.panel2.Controls.Add(this.textBox9);
+            this.panel2.Controls.Add(this.textBoxNumeCursNou);
             this.panel2.Controls.Add(this.labelCursNou);
-            this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.labelTipVechi);
             this.panel2.Controls.Add(this.labelAdaugaCursVechi);
             this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.textBox4);
+            this.panel2.Controls.Add(this.textBoxProfesor);
             this.panel2.Controls.Add(this.labelProfesorVechi);
-            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.textBoxSala);
             this.panel2.Controls.Add(this.labelSalaVeche);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.textBoxSaptamani);
             this.panel2.Controls.Add(this.labelSaptamaniVechi);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.textBoxIntervalOrar);
             this.panel2.Controls.Add(this.labelIntervalOrarVechi);
             this.panel2.Controls.Add(this.ButtonAnuleaza);
-            this.panel2.Controls.Add(this.textBoxNumeFacultate);
+            this.panel2.Controls.Add(this.textBoxNumeCurs);
             this.panel2.Controls.Add(this.lblNumeCursVechi);
             this.panel2.Controls.Add(this.lblModificaCurs);
-            this.panel2.Controls.Add(this.ButtonAdaugaFacultate);
+            this.panel2.Controls.Add(this.ButtonModificaCurs);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(2, 131);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(996, 667);
             this.panel2.TabIndex = 42;
             // 
-            // comboBox2
+            // label2
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(732, 210);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(54, 25);
+            this.label2.TabIndex = 92;
+            this.label2.Text = "Final";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(720, 235);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(18, 25);
+            this.label1.TabIndex = 91;
+            this.label1.Text = ":";
+            // 
+            // labelIntervalStart
+            // 
+            this.labelIntervalStart.AutoSize = true;
+            this.labelIntervalStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelIntervalStart.Location = new System.Drawing.Point(608, 206);
+            this.labelIntervalStart.Name = "labelIntervalStart";
+            this.labelIntervalStart.Size = new System.Drawing.Size(76, 25);
+            this.labelIntervalStart.TabIndex = 90;
+            this.labelIntervalStart.Text = "Inceput";
+            // 
+            // textBoxFinalIntervalOrar
+            // 
+            this.textBoxFinalIntervalOrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxFinalIntervalOrar.Location = new System.Drawing.Point(734, 235);
+            this.textBoxFinalIntervalOrar.Name = "textBoxFinalIntervalOrar";
+            this.textBoxFinalIntervalOrar.Size = new System.Drawing.Size(101, 26);
+            this.textBoxFinalIntervalOrar.TabIndex = 89;
+            // 
+            // textBoxInceputIntervalOrar
+            // 
+            this.textBoxInceputIntervalOrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxInceputIntervalOrar.Location = new System.Drawing.Point(613, 234);
+            this.textBoxInceputIntervalOrar.Name = "textBoxInceputIntervalOrar";
+            this.textBoxInceputIntervalOrar.Size = new System.Drawing.Size(101, 26);
+            this.textBoxInceputIntervalOrar.TabIndex = 88;
+            // 
+            // labelIntervalOrar
+            // 
+            this.labelIntervalOrar.AutoSize = true;
+            this.labelIntervalOrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelIntervalOrar.Location = new System.Drawing.Point(608, 170);
+            this.labelIntervalOrar.Name = "labelIntervalOrar";
+            this.labelIntervalOrar.Size = new System.Drawing.Size(114, 25);
+            this.labelIntervalOrar.TabIndex = 87;
+            this.labelIntervalOrar.Text = "Interval orar";
+            // 
+            // comboBoxTipuri
+            // 
+            this.comboBoxTipuri.FormattingEnabled = true;
+            this.comboBoxTipuri.Items.AddRange(new object[] {
             "Curs",
             "Seminar",
             "Laborator"});
-            this.comboBox2.Location = new System.Drawing.Point(613, 528);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(222, 24);
-            this.comboBox2.TabIndex = 80;
+            this.comboBoxTipuri.Location = new System.Drawing.Point(613, 528);
+            this.comboBoxTipuri.Name = "comboBoxTipuri";
+            this.comboBoxTipuri.Size = new System.Drawing.Size(222, 24);
+            this.comboBoxTipuri.TabIndex = 80;
             // 
             // labelTipNou
             // 
@@ -143,13 +207,13 @@
             this.labelTipNou.TabIndex = 79;
             this.labelTipNou.Text = "Tip";
             // 
-            // textBox5
+            // textBoxProfesorNou
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(613, 452);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(222, 26);
-            this.textBox5.TabIndex = 78;
+            this.textBoxProfesorNou.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxProfesorNou.Location = new System.Drawing.Point(613, 452);
+            this.textBoxProfesorNou.Name = "textBoxProfesorNou";
+            this.textBoxProfesorNou.Size = new System.Drawing.Size(222, 26);
+            this.textBoxProfesorNou.TabIndex = 78;
             // 
             // labelProfesorNou
             // 
@@ -161,13 +225,13 @@
             this.labelProfesorNou.TabIndex = 77;
             this.labelProfesorNou.Text = "Profesor";
             // 
-            // textBox6
+            // textBoxSalaNou
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(613, 372);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(222, 26);
-            this.textBox6.TabIndex = 76;
+            this.textBoxSalaNou.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSalaNou.Location = new System.Drawing.Point(613, 372);
+            this.textBoxSalaNou.Name = "textBoxSalaNou";
+            this.textBoxSalaNou.Size = new System.Drawing.Size(222, 26);
+            this.textBoxSalaNou.TabIndex = 76;
             // 
             // labelSalaNou
             // 
@@ -179,13 +243,13 @@
             this.labelSalaNou.TabIndex = 75;
             this.labelSalaNou.Text = "Sala";
             // 
-            // textBox7
+            // textBoxSaptamaniNou
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(613, 292);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(222, 26);
-            this.textBox7.TabIndex = 74;
+            this.textBoxSaptamaniNou.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSaptamaniNou.Location = new System.Drawing.Point(613, 292);
+            this.textBoxSaptamaniNou.Name = "textBoxSaptamaniNou";
+            this.textBoxSaptamaniNou.Size = new System.Drawing.Size(222, 26);
+            this.textBoxSaptamaniNou.TabIndex = 74;
             // 
             // labelSaptamaniNou
             // 
@@ -197,31 +261,13 @@
             this.labelSaptamaniNou.TabIndex = 73;
             this.labelSaptamaniNou.Text = "Saptamani";
             // 
-            // textBox8
+            // textBoxNumeCursNou
             // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(613, 212);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(222, 26);
-            this.textBox8.TabIndex = 72;
-            // 
-            // labelIntervalOrarNou
-            // 
-            this.labelIntervalOrarNou.AutoSize = true;
-            this.labelIntervalOrarNou.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelIntervalOrarNou.Location = new System.Drawing.Point(608, 182);
-            this.labelIntervalOrarNou.Name = "labelIntervalOrarNou";
-            this.labelIntervalOrarNou.Size = new System.Drawing.Size(114, 25);
-            this.labelIntervalOrarNou.TabIndex = 71;
-            this.labelIntervalOrarNou.Text = "Interval orar";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(613, 132);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(222, 26);
-            this.textBox9.TabIndex = 70;
+            this.textBoxNumeCursNou.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNumeCursNou.Location = new System.Drawing.Point(613, 132);
+            this.textBoxNumeCursNou.Name = "textBoxNumeCursNou";
+            this.textBoxNumeCursNou.Size = new System.Drawing.Size(222, 26);
+            this.textBoxNumeCursNou.TabIndex = 70;
             // 
             // labelCursNou
             // 
@@ -232,15 +278,6 @@
             this.labelCursNou.Size = new System.Drawing.Size(106, 25);
             this.labelCursNou.TabIndex = 69;
             this.labelCursNou.Text = "Nume curs";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Enabled = false;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(165, 528);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(222, 24);
-            this.comboBox1.TabIndex = 68;
             // 
             // labelTipVechi
             // 
@@ -272,14 +309,14 @@
             this.label10.TabIndex = 65;
             this.label10.Text = "Modificari curs";
             // 
-            // textBox4
+            // textBoxProfesor
             // 
-            this.textBox4.Enabled = false;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(165, 452);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(222, 26);
-            this.textBox4.TabIndex = 54;
+            this.textBoxProfesor.Enabled = false;
+            this.textBoxProfesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxProfesor.Location = new System.Drawing.Point(165, 452);
+            this.textBoxProfesor.Name = "textBoxProfesor";
+            this.textBoxProfesor.Size = new System.Drawing.Size(222, 26);
+            this.textBoxProfesor.TabIndex = 54;
             // 
             // labelProfesorVechi
             // 
@@ -291,14 +328,14 @@
             this.labelProfesorVechi.TabIndex = 53;
             this.labelProfesorVechi.Text = "Profesor";
             // 
-            // textBox3
+            // textBoxSala
             // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(165, 372);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(222, 26);
-            this.textBox3.TabIndex = 52;
+            this.textBoxSala.Enabled = false;
+            this.textBoxSala.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSala.Location = new System.Drawing.Point(165, 372);
+            this.textBoxSala.Name = "textBoxSala";
+            this.textBoxSala.Size = new System.Drawing.Size(222, 26);
+            this.textBoxSala.TabIndex = 52;
             // 
             // labelSalaVeche
             // 
@@ -310,14 +347,14 @@
             this.labelSalaVeche.TabIndex = 51;
             this.labelSalaVeche.Text = "Sala";
             // 
-            // textBox2
+            // textBoxSaptamani
             // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(165, 292);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(222, 26);
-            this.textBox2.TabIndex = 50;
+            this.textBoxSaptamani.Enabled = false;
+            this.textBoxSaptamani.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSaptamani.Location = new System.Drawing.Point(165, 292);
+            this.textBoxSaptamani.Name = "textBoxSaptamani";
+            this.textBoxSaptamani.Size = new System.Drawing.Size(222, 26);
+            this.textBoxSaptamani.TabIndex = 50;
             // 
             // labelSaptamaniVechi
             // 
@@ -329,14 +366,14 @@
             this.labelSaptamaniVechi.TabIndex = 49;
             this.labelSaptamaniVechi.Text = "Saptamani";
             // 
-            // textBox1
+            // textBoxIntervalOrar
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(165, 212);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(222, 26);
-            this.textBox1.TabIndex = 48;
+            this.textBoxIntervalOrar.Enabled = false;
+            this.textBoxIntervalOrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxIntervalOrar.Location = new System.Drawing.Point(165, 212);
+            this.textBoxIntervalOrar.Name = "textBoxIntervalOrar";
+            this.textBoxIntervalOrar.Size = new System.Drawing.Size(222, 26);
+            this.textBoxIntervalOrar.TabIndex = 48;
             // 
             // labelIntervalOrarVechi
             // 
@@ -367,14 +404,14 @@
             this.ButtonAnuleaza.UseVisualStyleBackColor = false;
             this.ButtonAnuleaza.Click += new System.EventHandler(this.ButtonAnuleaza_Click);
             // 
-            // textBoxNumeFacultate
+            // textBoxNumeCurs
             // 
-            this.textBoxNumeFacultate.Enabled = false;
-            this.textBoxNumeFacultate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNumeFacultate.Location = new System.Drawing.Point(165, 132);
-            this.textBoxNumeFacultate.Name = "textBoxNumeFacultate";
-            this.textBoxNumeFacultate.Size = new System.Drawing.Size(222, 26);
-            this.textBoxNumeFacultate.TabIndex = 45;
+            this.textBoxNumeCurs.Enabled = false;
+            this.textBoxNumeCurs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNumeCurs.Location = new System.Drawing.Point(165, 132);
+            this.textBoxNumeCurs.Name = "textBoxNumeCurs";
+            this.textBoxNumeCurs.Size = new System.Drawing.Size(222, 26);
+            this.textBoxNumeCurs.TabIndex = 45;
             // 
             // lblNumeCursVechi
             // 
@@ -396,23 +433,24 @@
             this.lblModificaCurs.TabIndex = 43;
             this.lblModificaCurs.Text = "MODIFICA CURS";
             // 
-            // ButtonAdaugaFacultate
+            // ButtonModificaCurs
             // 
-            this.ButtonAdaugaFacultate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(65)))));
-            this.ButtonAdaugaFacultate.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.ButtonAdaugaFacultate.FlatAppearance.BorderSize = 0;
-            this.ButtonAdaugaFacultate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(33)))), ((int)(((byte)(45)))));
-            this.ButtonAdaugaFacultate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
-            this.ButtonAdaugaFacultate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonAdaugaFacultate.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonAdaugaFacultate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(204)))), ((int)(((byte)(209)))));
-            this.ButtonAdaugaFacultate.Location = new System.Drawing.Point(216, 594);
-            this.ButtonAdaugaFacultate.Margin = new System.Windows.Forms.Padding(1);
-            this.ButtonAdaugaFacultate.Name = "ButtonAdaugaFacultate";
-            this.ButtonAdaugaFacultate.Size = new System.Drawing.Size(255, 50);
-            this.ButtonAdaugaFacultate.TabIndex = 42;
-            this.ButtonAdaugaFacultate.Text = "Adauga";
-            this.ButtonAdaugaFacultate.UseVisualStyleBackColor = false;
+            this.ButtonModificaCurs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(65)))));
+            this.ButtonModificaCurs.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.ButtonModificaCurs.FlatAppearance.BorderSize = 0;
+            this.ButtonModificaCurs.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(33)))), ((int)(((byte)(45)))));
+            this.ButtonModificaCurs.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
+            this.ButtonModificaCurs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonModificaCurs.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonModificaCurs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(204)))), ((int)(((byte)(209)))));
+            this.ButtonModificaCurs.Location = new System.Drawing.Point(216, 594);
+            this.ButtonModificaCurs.Margin = new System.Windows.Forms.Padding(1);
+            this.ButtonModificaCurs.Name = "ButtonModificaCurs";
+            this.ButtonModificaCurs.Size = new System.Drawing.Size(255, 50);
+            this.ButtonModificaCurs.TabIndex = 42;
+            this.ButtonModificaCurs.Text = "Modifica";
+            this.ButtonModificaCurs.UseVisualStyleBackColor = false;
+            this.ButtonModificaCurs.Click += new System.EventHandler(this.ButtonModificaCurs_Click);
             // 
             // HeaderPanel
             // 
@@ -461,6 +499,15 @@
             this.lblIndexFac.Size = new System.Drawing.Size(0, 16);
             this.lblIndexFac.TabIndex = 37;
             // 
+            // textBoxTip
+            // 
+            this.textBoxTip.Enabled = false;
+            this.textBoxTip.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTip.Location = new System.Drawing.Point(165, 528);
+            this.textBoxTip.Name = "textBoxTip";
+            this.textBoxTip.Size = new System.Drawing.Size(222, 26);
+            this.textBoxTip.TabIndex = 93;
+            // 
             // Form_Modifica_Curs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -492,33 +539,37 @@
         private System.Windows.Forms.Label lblIndexFac;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button ButtonAnuleaza;
-        private System.Windows.Forms.TextBox textBoxNumeFacultate;
+        private System.Windows.Forms.TextBox textBoxNumeCurs;
         private System.Windows.Forms.Label lblNumeCursVechi;
         private System.Windows.Forms.Label lblModificaCurs;
-        private System.Windows.Forms.Button ButtonAdaugaFacultate;
+        private System.Windows.Forms.Button ButtonModificaCurs;
         private System.Windows.Forms.Label labelAdaugaCursVechi;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxProfesor;
         private System.Windows.Forms.Label labelProfesorVechi;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxSala;
         private System.Windows.Forms.Label labelSalaVeche;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxSaptamani;
         private System.Windows.Forms.Label labelSaptamaniVechi;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxIntervalOrar;
         private System.Windows.Forms.Label labelIntervalOrarVechi;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBoxTipuri;
         private System.Windows.Forms.Label labelTipNou;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBoxProfesorNou;
         private System.Windows.Forms.Label labelProfesorNou;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBoxSalaNou;
         private System.Windows.Forms.Label labelSalaNou;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBoxSaptamaniNou;
         private System.Windows.Forms.Label labelSaptamaniNou;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label labelIntervalOrarNou;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textBoxNumeCursNou;
         private System.Windows.Forms.Label labelCursNou;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label labelTipVechi;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelIntervalStart;
+        private System.Windows.Forms.TextBox textBoxFinalIntervalOrar;
+        private System.Windows.Forms.TextBox textBoxInceputIntervalOrar;
+        private System.Windows.Forms.Label labelIntervalOrar;
+        private System.Windows.Forms.TextBox textBoxTip;
     }
 }

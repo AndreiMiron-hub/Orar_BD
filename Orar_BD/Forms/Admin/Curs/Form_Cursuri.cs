@@ -20,6 +20,9 @@ namespace Orar_BD
         List<Facultate> listaFacultati;
         List<Grupa> listaGrupe;
 
+        private const int PRIMA_COLOANA = 0;
+
+
         public Form_Cursuri()
         {
             InitializeComponent();
@@ -164,6 +167,41 @@ namespace Orar_BD
             {
                 MessageBox.Show(ex.Message.ToString());
 
+            }
+        }
+
+        private void Button_Modificare_Click(object sender, EventArgs e)
+        {
+            Curs curs = GetCursDataGrid();
+            if (curs == null) return;
+
+            DialogResult dialogResult = MessageBox.Show("Esti sigur ca vrei sa modifici cursul?", "Mesaj de confirmare", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.No)
+                return;
+
+            using (Form_Modifica_Curs startF = new Form_Modifica_Curs(curs))
+            {
+                startF.ShowDialog();
+            }
+        }
+
+        private Curs GetCursDataGrid()
+        {
+            try
+            {
+                var currentCell = dataGridDashboard.CurrentCell;
+                if (currentCell == null)
+                {
+                    MessageBox.Show("Selectati o facultate din tabel");
+                    return null;
+                }
+                int idCurs = Convert.ToInt32(dataGridDashboard[PRIMA_COLOANA, currentCell.RowIndex].Value);
+
+                return stocareCursuri.GetCurs(idCurs);
+            }
+            catch (Exception)
+            {
+                throw;
             }
         }
     }
