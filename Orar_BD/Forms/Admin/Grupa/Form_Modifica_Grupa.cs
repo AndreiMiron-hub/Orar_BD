@@ -44,7 +44,7 @@ namespace Orar_BD
                 
                 if (stocareGrupe.ValideazaExistentaGrupa(grupa))
                 {
-                    MessageBox.Show("Facultatea exista deja in baza de date");
+                    MessageBox.Show("Grupa exista deja in baza de date");
                     return;
                 }
 
@@ -59,7 +59,7 @@ namespace Orar_BD
                 }
                 else
                 {
-                    MessageBox.Show("Eroare la actualizare facultate");
+                    MessageBox.Show("Eroare la actualizare grupa");
                 }
             }
             catch (Exception ex)
@@ -141,7 +141,7 @@ namespace Orar_BD
                         idFac = item.IdFacultate;
                 }
                 if (idFac > 0)
-                    return new Grupa(int.Parse(textBoxGrupaNou.Text), int.Parse(textBoxNumarStudentiNou.Text), textBoxSefGrupaNou.Text, idFac);
+                    return new Grupa(int.Parse(textBoxGrupaNou.Text), int.Parse(textBoxNumarStudentiNou.Text), textBoxSefGrupaNou.Text, idFac, comboBoxFacultateNou.SelectedItem.ToString());
                 
             }
             catch (Exception)

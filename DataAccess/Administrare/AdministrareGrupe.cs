@@ -32,7 +32,7 @@ namespace DataAccess
         public List<Grupa> GetGrupeAfisare()
         {
             var result = new List<Grupa>();
-            var dsGrupe = SqlDBHelper.ExecuteDataSet("select g.idGrupa, g.nrStudenti, g.sefGrupa, g.idFacultate, f.numeFacultate " +
+            var dsGrupe = SqlDBHelper.ExecuteDataSet("select g.idGrupa, g.nrStudenti, g.sefGrupa, g.idFacultate, f.numeFacultate, g.numarGrupa " +
                                                     "from facultati_andm f, grupe_andm g " +
                                                     "where g.idFacultate = f.idFacultate", CommandType.Text);
 
@@ -70,11 +70,13 @@ namespace DataAccess
         public bool AddGrupa(Grupa g, Facultate f)
         {
             return SqlDBHelper.ExecuteNonQuery(
-                 $"INSERT INTO GRUPE_ANDM VALUES ( :idGrupa, :nrStudenti , :sefGrupa, :idFacultate)", CommandType.Text,
-                 new OracleParameter(":idGrupa", OracleDbType.Int32, g.IdGrupa, ParameterDirection.Input),
+                 $"INSERT INTO GRUPE_ANDM VALUES ({_tableSequence}.NEXTVAL, :numarGrupa, :nrStudenti , :sefGrupa, :idFacultate, :numeFacultate)", CommandType.Text,
+                 new OracleParameter(":numarGrupa", OracleDbType.Int32, g.NumarGrupa, ParameterDirection.Input),
                  new OracleParameter(":nrStudenti", OracleDbType.Int32, g.NrStudenti, ParameterDirection.Input),
                  new OracleParameter(":sefGrupa", OracleDbType.Varchar2, g.SefGrupa, ParameterDirection.Input),
-                 new OracleParameter(":idFacultate", OracleDbType.Int32, f.IdFacultate, ParameterDirection.Input)
+                 new OracleParameter(":idFacultate", OracleDbType.Int32, f.IdFacultate, ParameterDirection.Input),
+                 new OracleParameter(":numeFacultate", OracleDbType.Varchar2, f.NumeFacultate, ParameterDirection.Input)
+
                  );
         }
 
@@ -97,7 +99,20 @@ namespace DataAccess
 
         public bool UpdateGrupa(Grupa m)
         {
-            throw new NotImplementedException();
+            return SqlDBHelper.ExecuteNonQuery(
+                "UPDATE grupe_andm set " +
+                "NUMARGRUPA = :NUMARGRUPA" +
+                "NRSTUDENTI = :NRSTUDENTI, " +
+                "SEFGRUPA = :SEFGRUPA, " +
+                "IDFACULTATE = :IDFACULTATE, " +
+                "NUMEFACULTATE = :NUMEFACULTATE ",
+                CommandType.Text,
+                new OracleParameter(":NRSTUDENTI", OracleDbType.Int32, m.NrStudenti, ParameterDirection.Input),
+                new OracleParameter(":SEFGRUPA", OracleDbType.Varchar2, m.SefGrupa, ParameterDirection.Input),
+                new OracleParameter(":IDFACULTATE", OracleDbType.Int32, m.IdFacultate, ParameterDirection.Input),
+                new OracleParameter(":NUMARGRUPA", OracleDbType.Int32, m.NumarGrupa, ParameterDirection.Input),
+                new OracleParameter(":NUMEFACULTATE", OracleDbType.Varchar2, m.NumeFacultate, ParameterDirection.Input)
+                );
         }
 
         public bool DeleteGrupa(Grupa m)

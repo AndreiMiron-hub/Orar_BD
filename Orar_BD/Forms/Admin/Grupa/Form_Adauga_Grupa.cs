@@ -110,7 +110,7 @@ namespace Orar_BD
                         idFac = item.IdFacultate;
                 }
                 if (idFac > 0)
-                    return new Grupa(int.Parse(textBoxNumarGrupa.Text), int.Parse(textBoxNumarStudenti.Text), textBoxSefGrupa.Text, idFac);
+                    return new Grupa(int.Parse(textBoxNumarGrupa.Text), int.Parse(textBoxNumarStudenti.Text), textBoxSefGrupa.Text, idFac, comboBoxFacultate.SelectedItem.ToString());
             }
             catch (Exception)
             {

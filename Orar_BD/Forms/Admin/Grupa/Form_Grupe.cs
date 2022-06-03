@@ -60,9 +60,11 @@ namespace Orar_BD
                 var grupe = stocareGrupe.GetGrupeAfisare();
                 if (grupe != null && grupe.Any())
                 {
-                    dataGridDashboard.DataSource = grupe.Select(m => new { m.IdGrupa, m.SefGrupa, m.NrStudenti, m.NumeFacultate }).ToList();
+                    dataGridDashboard.DataSource = grupe.Select(m => new { m.IdGrupa,m.NumarGrupa, m.SefGrupa, m.NrStudenti, m.NumeFacultate }).ToList();
+
 
                     dataGridDashboard.Columns["idGrupa"].HeaderText = "Grupa";
+                    dataGridDashboard.Columns["numarGrupa"].HeaderText = "Grupa";
                     dataGridDashboard.Columns["SefGrupa"].HeaderText = "Sef Grupa";
                     dataGridDashboard.Columns["NrStudenti"].HeaderText = "Nr Studenti";
                     dataGridDashboard.Columns["NumeFacultate"].HeaderText = "Facultate";

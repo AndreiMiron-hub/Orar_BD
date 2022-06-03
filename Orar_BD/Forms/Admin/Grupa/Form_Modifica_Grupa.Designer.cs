@@ -115,13 +115,12 @@
             this.lblFacultateNou.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFacultateNou.Location = new System.Drawing.Point(522, 277);
             this.lblFacultateNou.Name = "lblFacultateNou";
-            this.lblFacultateNou.Size = new System.Drawing.Size(119, 25);
+            this.lblFacultateNou.Size = new System.Drawing.Size(142, 25);
             this.lblFacultateNou.TabIndex = 61;
-            this.lblFacultateNou.Text = "Nume grupa";
+            this.lblFacultateNou.Text = "Nume facultate";
             // 
             // textBoxSefGrupaNou
             // 
-            this.textBoxSefGrupaNou.Enabled = false;
             this.textBoxSefGrupaNou.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxSefGrupaNou.Location = new System.Drawing.Point(527, 248);
             this.textBoxSefGrupaNou.Name = "textBoxSefGrupaNou";
@@ -140,7 +139,6 @@
             // 
             // textBoxNumarStudentiNou
             // 
-            this.textBoxNumarStudentiNou.Enabled = false;
             this.textBoxNumarStudentiNou.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNumarStudentiNou.Location = new System.Drawing.Point(527, 189);
             this.textBoxNumarStudentiNou.Name = "textBoxNumarStudentiNou";
