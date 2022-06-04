@@ -47,8 +47,6 @@
             this.textBoxGrupaActual = new System.Windows.Forms.TextBox();
             this.lblNumeGrupaVechi = new System.Windows.Forms.Label();
             this.ButtonAnuleaza = new System.Windows.Forms.Button();
-            this.textBoxGrupaNou = new System.Windows.Forms.TextBox();
-            this.lblNumeGrupaNou = new System.Windows.Forms.Label();
             this.lblModificaGrupa = new System.Windows.Forms.Label();
             this.ButtonModificaFacultate = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -56,6 +54,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ButtonExit = new System.Windows.Forms.Button();
             this.lblIndexFac = new System.Windows.Forms.Label();
+            this.lblNumeGrupaNou = new System.Windows.Forms.Label();
+            this.textBoxGrupaNou = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.HeaderPanel.SuspendLayout();
@@ -115,13 +115,12 @@
             this.lblFacultateNou.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFacultateNou.Location = new System.Drawing.Point(522, 277);
             this.lblFacultateNou.Name = "lblFacultateNou";
-            this.lblFacultateNou.Size = new System.Drawing.Size(119, 25);
+            this.lblFacultateNou.Size = new System.Drawing.Size(142, 25);
             this.lblFacultateNou.TabIndex = 61;
-            this.lblFacultateNou.Text = "Nume grupa";
+            this.lblFacultateNou.Text = "Nume facultate";
             // 
             // textBoxSefGrupaNou
             // 
-            this.textBoxSefGrupaNou.Enabled = false;
             this.textBoxSefGrupaNou.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxSefGrupaNou.Location = new System.Drawing.Point(527, 248);
             this.textBoxSefGrupaNou.Name = "textBoxSefGrupaNou";
@@ -140,7 +139,6 @@
             // 
             // textBoxNumarStudentiNou
             // 
-            this.textBoxNumarStudentiNou.Enabled = false;
             this.textBoxNumarStudentiNou.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNumarStudentiNou.Location = new System.Drawing.Point(527, 189);
             this.textBoxNumarStudentiNou.Name = "textBoxNumarStudentiNou";
@@ -263,24 +261,6 @@
             this.ButtonAnuleaza.UseVisualStyleBackColor = false;
             this.ButtonAnuleaza.Click += new System.EventHandler(this.ButtonAnuleaza_Click);
             // 
-            // textBoxGrupaNou
-            // 
-            this.textBoxGrupaNou.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxGrupaNou.Location = new System.Drawing.Point(527, 130);
-            this.textBoxGrupaNou.Name = "textBoxGrupaNou";
-            this.textBoxGrupaNou.Size = new System.Drawing.Size(222, 26);
-            this.textBoxGrupaNou.TabIndex = 45;
-            // 
-            // lblNumeGrupaNou
-            // 
-            this.lblNumeGrupaNou.AutoSize = true;
-            this.lblNumeGrupaNou.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumeGrupaNou.Location = new System.Drawing.Point(522, 100);
-            this.lblNumeGrupaNou.Name = "lblNumeGrupaNou";
-            this.lblNumeGrupaNou.Size = new System.Drawing.Size(119, 25);
-            this.lblNumeGrupaNou.TabIndex = 44;
-            this.lblNumeGrupaNou.Text = "Nume grupa";
-            // 
             // lblModificaGrupa
             // 
             this.lblModificaGrupa.AutoSize = true;
@@ -370,6 +350,25 @@
             this.lblIndexFac.Size = new System.Drawing.Size(0, 16);
             this.lblIndexFac.TabIndex = 37;
             // 
+            // lblNumeGrupaNou
+            // 
+            this.lblNumeGrupaNou.AutoSize = true;
+            this.lblNumeGrupaNou.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumeGrupaNou.Location = new System.Drawing.Point(522, 100);
+            this.lblNumeGrupaNou.Name = "lblNumeGrupaNou";
+            this.lblNumeGrupaNou.Size = new System.Drawing.Size(119, 25);
+            this.lblNumeGrupaNou.TabIndex = 44;
+            this.lblNumeGrupaNou.Text = "Nume grupa";
+            // 
+            // textBoxGrupaNou
+            // 
+            this.textBoxGrupaNou.Enabled = false;
+            this.textBoxGrupaNou.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxGrupaNou.Location = new System.Drawing.Point(527, 130);
+            this.textBoxGrupaNou.Name = "textBoxGrupaNou";
+            this.textBoxGrupaNou.Size = new System.Drawing.Size(222, 26);
+            this.textBoxGrupaNou.TabIndex = 45;
+            // 
             // Form_Modifica_Grupa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -400,8 +399,6 @@
         private System.Windows.Forms.TextBox textBoxGrupaActual;
         private System.Windows.Forms.Label lblNumeGrupaVechi;
         private System.Windows.Forms.Button ButtonAnuleaza;
-        private System.Windows.Forms.TextBox textBoxGrupaNou;
-        private System.Windows.Forms.Label lblNumeGrupaNou;
         private System.Windows.Forms.Label lblModificaGrupa;
         private System.Windows.Forms.Button ButtonModificaFacultate;
         private System.Windows.Forms.Panel panel1;
@@ -421,5 +418,7 @@
         private System.Windows.Forms.Label lblNrStudentiVechi;
         private System.Windows.Forms.TextBox textBoxFacultateActual;
         private System.Windows.Forms.ComboBox comboBoxFacultateNou;
+        private System.Windows.Forms.TextBox textBoxGrupaNou;
+        private System.Windows.Forms.Label lblNumeGrupaNou;
     }
 }

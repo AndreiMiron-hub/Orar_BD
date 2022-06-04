@@ -34,6 +34,7 @@ namespace ModelLibraries
             NrStudenti = Convert.ToInt32(linieBD["NrStudenti"].ToString());
             SefGrupa = linieBD["SefGrupa"].ToString();
             IdFacultate = Convert.ToInt32(linieBD["idFacultate"].ToString());
+            NumeFacultate = linieBD["NumeFacultate"].ToString();
         }
 
         public void GrupaAfisare(DataRow linieBD)
