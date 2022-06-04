@@ -32,7 +32,7 @@ namespace DataAccess
         public List<Grupa> GetGrupeAfisare()
         {
             var result = new List<Grupa>();
-            var dsGrupe = SqlDBHelper.ExecuteDataSet("select g.idGrupa, g.nrStudenti, g.sefGrupa, g.idFacultate, f.numeFacultate " +
+            var dsGrupe = SqlDBHelper.ExecuteDataSet("select g.idGrupa, g.nrStudenti, g.sefGrupa, g.idFacultate, f.numeFacultate" +
                                                     "from facultati_andm f, grupe_andm g " +
                                                     "where g.idFacultate = f.idFacultate", CommandType.Text);
 
