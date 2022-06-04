@@ -41,6 +41,12 @@
             this.Button_Afisare = new System.Windows.Forms.Button();
             this.HeaderPanel = new System.Windows.Forms.Panel();
             this.dataGridDashboard = new System.Windows.Forms.DataGridView();
+            this.comboBoxFacultati = new System.Windows.Forms.ComboBox();
+            this.labelFacultati = new System.Windows.Forms.Label();
+            this.labelGrupe = new System.Windows.Forms.Label();
+            this.comboBoxGrupe = new System.Windows.Forms.ComboBox();
+            this.ButtonFiltru = new System.Windows.Forms.Button();
+            this.ButtonResetFiltru = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSigla)).BeginInit();
             this.panel_Dash_Menu.SuspendLayout();
             this.HeaderPanel.SuspendLayout();
@@ -153,6 +159,7 @@
             this.Button_Modificare.TabIndex = 15;
             this.Button_Modificare.Text = "Modifica";
             this.Button_Modificare.UseVisualStyleBackColor = false;
+            this.Button_Modificare.Click += new System.EventHandler(this.Button_Modificare_Click);
             // 
             // Button_Adaugare
             // 
@@ -171,6 +178,7 @@
             this.Button_Adaugare.TabIndex = 14;
             this.Button_Adaugare.Text = "Adauga";
             this.Button_Adaugare.UseVisualStyleBackColor = false;
+            this.Button_Adaugare.Click += new System.EventHandler(this.Button_Adaugare_Click);
             // 
             // Button_Afisare
             // 
@@ -211,7 +219,7 @@
             this.dataGridDashboard.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridDashboard.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(230)))));
             this.dataGridDashboard.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridDashboard.Location = new System.Drawing.Point(242, 179);
+            this.dataGridDashboard.Location = new System.Drawing.Point(242, 271);
             this.dataGridDashboard.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridDashboard.Name = "dataGridDashboard";
             this.dataGridDashboard.RowHeadersWidth = 51;
@@ -219,12 +227,93 @@
             this.dataGridDashboard.Size = new System.Drawing.Size(895, 461);
             this.dataGridDashboard.TabIndex = 17;
             // 
+            // comboBoxFacultati
+            // 
+            this.comboBoxFacultati.FormattingEnabled = true;
+            this.comboBoxFacultati.Location = new System.Drawing.Point(279, 201);
+            this.comboBoxFacultati.Name = "comboBoxFacultati";
+            this.comboBoxFacultati.Size = new System.Drawing.Size(261, 24);
+            this.comboBoxFacultati.TabIndex = 19;
+            // 
+            // labelFacultati
+            // 
+            this.labelFacultati.AutoSize = true;
+            this.labelFacultati.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFacultati.Location = new System.Drawing.Point(274, 172);
+            this.labelFacultati.Name = "labelFacultati";
+            this.labelFacultati.Size = new System.Drawing.Size(101, 26);
+            this.labelFacultati.TabIndex = 20;
+            this.labelFacultati.Text = "Facultate";
+            // 
+            // labelGrupe
+            // 
+            this.labelGrupe.AutoSize = true;
+            this.labelGrupe.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGrupe.Location = new System.Drawing.Point(587, 172);
+            this.labelGrupe.Name = "labelGrupe";
+            this.labelGrupe.Size = new System.Drawing.Size(72, 26);
+            this.labelGrupe.TabIndex = 22;
+            this.labelGrupe.Text = "Grupa";
+            // 
+            // comboBoxGrupe
+            // 
+            this.comboBoxGrupe.FormattingEnabled = true;
+            this.comboBoxGrupe.Location = new System.Drawing.Point(592, 201);
+            this.comboBoxGrupe.Name = "comboBoxGrupe";
+            this.comboBoxGrupe.Size = new System.Drawing.Size(261, 24);
+            this.comboBoxGrupe.TabIndex = 21;
+            this.comboBoxGrupe.SelectedIndexChanged += new System.EventHandler(this.comboBoxGrupe_SelectedIndexChanged);
+            // 
+            // ButtonFiltru
+            // 
+            this.ButtonFiltru.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(46)))), ((int)(((byte)(84)))));
+            this.ButtonFiltru.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.ButtonFiltru.FlatAppearance.BorderSize = 0;
+            this.ButtonFiltru.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(33)))), ((int)(((byte)(45)))));
+            this.ButtonFiltru.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
+            this.ButtonFiltru.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonFiltru.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonFiltru.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(204)))), ((int)(((byte)(209)))));
+            this.ButtonFiltru.Location = new System.Drawing.Point(882, 175);
+            this.ButtonFiltru.Margin = new System.Windows.Forms.Padding(1);
+            this.ButtonFiltru.Name = "ButtonFiltru";
+            this.ButtonFiltru.Size = new System.Drawing.Size(117, 50);
+            this.ButtonFiltru.TabIndex = 43;
+            this.ButtonFiltru.Text = "Filtreaza";
+            this.ButtonFiltru.UseVisualStyleBackColor = false;
+            this.ButtonFiltru.Click += new System.EventHandler(this.ButtonFiltru_Click);
+            // 
+            // ButtonResetFiltru
+            // 
+            this.ButtonResetFiltru.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(46)))), ((int)(((byte)(84)))));
+            this.ButtonResetFiltru.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.ButtonResetFiltru.FlatAppearance.BorderSize = 0;
+            this.ButtonResetFiltru.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(33)))), ((int)(((byte)(45)))));
+            this.ButtonResetFiltru.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
+            this.ButtonResetFiltru.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonResetFiltru.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonResetFiltru.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(204)))), ((int)(((byte)(209)))));
+            this.ButtonResetFiltru.Location = new System.Drawing.Point(1015, 175);
+            this.ButtonResetFiltru.Margin = new System.Windows.Forms.Padding(1);
+            this.ButtonResetFiltru.Name = "ButtonResetFiltru";
+            this.ButtonResetFiltru.Size = new System.Drawing.Size(117, 50);
+            this.ButtonResetFiltru.TabIndex = 44;
+            this.ButtonResetFiltru.Text = "Reset";
+            this.ButtonResetFiltru.UseVisualStyleBackColor = false;
+            this.ButtonResetFiltru.Click += new System.EventHandler(this.ButtonResetFiltru_Click);
+            // 
             // Form_Cursuri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(230)))));
             this.ClientSize = new System.Drawing.Size(1150, 800);
+            this.Controls.Add(this.ButtonResetFiltru);
+            this.Controls.Add(this.ButtonFiltru);
+            this.Controls.Add(this.labelGrupe);
+            this.Controls.Add(this.comboBoxGrupe);
+            this.Controls.Add(this.labelFacultati);
+            this.Controls.Add(this.comboBoxFacultati);
             this.Controls.Add(this.panel_Dash_Menu);
             this.Controls.Add(this.HeaderPanel);
             this.Controls.Add(this.dataGridDashboard);
@@ -239,6 +328,7 @@
             this.HeaderPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDashboard)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -255,5 +345,11 @@
         private System.Windows.Forms.Button Button_Afisare;
         private System.Windows.Forms.Panel HeaderPanel;
         private System.Windows.Forms.DataGridView dataGridDashboard;
+        private System.Windows.Forms.ComboBox comboBoxFacultati;
+        private System.Windows.Forms.Label labelFacultati;
+        private System.Windows.Forms.Label labelGrupe;
+        private System.Windows.Forms.ComboBox comboBoxGrupe;
+        private System.Windows.Forms.Button ButtonFiltru;
+        private System.Windows.Forms.Button ButtonResetFiltru;
     }
 }

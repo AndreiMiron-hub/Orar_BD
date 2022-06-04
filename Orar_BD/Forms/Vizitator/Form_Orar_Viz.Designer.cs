@@ -58,13 +58,15 @@
             this.ButtonBack = new System.Windows.Forms.Button();
             this.tableLayoutPanel_Orar = new System.Windows.Forms.TableLayoutPanel();
             this.HeaderPanel = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox_Back_Choice = new System.Windows.Forms.GroupBox();
-            this.radioButton_Select_Grupe = new System.Windows.Forms.RadioButton();
             this.radioButton_Dashboard = new System.Windows.Forms.RadioButton();
+            this.radioButton_Select_Grupe = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel_Legenda.SuspendLayout();
             this.tableLayoutPanel_Orar.SuspendLayout();
             this.HeaderPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox_Back_Choice.SuspendLayout();
             this.SuspendLayout();
@@ -144,7 +146,7 @@
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(131, 46);
             this.label14.TabIndex = 22;
-            this.label14.Text = "21:00 - 22:00";
+            this.label14.Text = "21:00 : 22:00";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label_Sambata
@@ -264,7 +266,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(131, 37);
             this.label4.TabIndex = 12;
-            this.label4.Text = "20:00 - 21:00";
+            this.label4.Text = "20:00 : 21:00";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
@@ -279,7 +281,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(131, 37);
             this.label6.TabIndex = 14;
-            this.label6.Text = "19:00 - 20:00";
+            this.label6.Text = "19:00 : 20:00";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ButtonExit
@@ -311,7 +313,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(131, 37);
             this.label7.TabIndex = 15;
-            this.label7.Text = "18:00 - 19:00";
+            this.label7.Text = "18:00 : 19:00";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
@@ -326,7 +328,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(131, 37);
             this.label2.TabIndex = 9;
-            this.label2.Text = "17:00 - 18:00";
+            this.label2.Text = "17:00 : 18:00";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
@@ -341,7 +343,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(131, 37);
             this.label1.TabIndex = 10;
-            this.label1.Text = "16:00 - 17:00";
+            this.label1.Text = "16:00 : 17:00";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label9
@@ -356,7 +358,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(131, 37);
             this.label9.TabIndex = 17;
-            this.label9.Text = "15:00 - 16:00";
+            this.label9.Text = "15:00 : 16:00";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label8
@@ -371,7 +373,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(131, 37);
             this.label8.TabIndex = 16;
-            this.label8.Text = "14:00 - 15:00";
+            this.label8.Text = "14:00 : 15:00";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label10
@@ -386,7 +388,7 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(131, 37);
             this.label10.TabIndex = 18;
-            this.label10.Text = "13:00 - 14:00";
+            this.label10.Text = "13:00 : 14:00";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
@@ -401,7 +403,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(131, 37);
             this.label5.TabIndex = 13;
-            this.label5.Text = "12:00 - 13:00";
+            this.label5.Text = "12:00 : 13:00";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
@@ -416,7 +418,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(131, 37);
             this.label3.TabIndex = 11;
-            this.label3.Text = "11:00 - 12:00";
+            this.label3.Text = "11:00 : 12:00";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label12
@@ -431,7 +433,7 @@
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(131, 37);
             this.label12.TabIndex = 20;
-            this.label12.Text = "10:00 - 11:00";
+            this.label12.Text = "10:00 : 11:00";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label13
@@ -446,7 +448,7 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(131, 37);
             this.label13.TabIndex = 21;
-            this.label13.Text = "09:00 - 10:00";
+            this.label13.Text = "09:00 : 10:00";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label_Ore
@@ -461,7 +463,7 @@
             this.label_Ore.Name = "label_Ore";
             this.label_Ore.Size = new System.Drawing.Size(131, 37);
             this.label_Ore.TabIndex = 19;
-            this.label_Ore.Text = "08:00 - 09:00";
+            this.label_Ore.Text = "08:00 : 09:00";
             this.label_Ore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ButtonBack
@@ -539,6 +541,7 @@
             // HeaderPanel
             // 
             this.HeaderPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(46)))), ((int)(((byte)(84)))));
+            this.HeaderPanel.Controls.Add(this.pictureBox2);
             this.HeaderPanel.Controls.Add(this.pictureBox1);
             this.HeaderPanel.Controls.Add(this.ButtonBack);
             this.HeaderPanel.Controls.Add(this.ButtonExit);
@@ -547,6 +550,16 @@
             this.HeaderPanel.Name = "HeaderPanel";
             this.HeaderPanel.Size = new System.Drawing.Size(1150, 120);
             this.HeaderPanel.TabIndex = 9;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::Orar_BD.Properties.Resources.Sigla_USV_Banner_2;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox2.Location = new System.Drawing.Point(23, -3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(553, 123);
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -568,16 +581,6 @@
             this.groupBox_Back_Choice.TabStop = false;
             this.groupBox_Back_Choice.Visible = false;
             // 
-            // radioButton_Select_Grupe
-            // 
-            this.radioButton_Select_Grupe.AutoSize = true;
-            this.radioButton_Select_Grupe.Location = new System.Drawing.Point(11, 15);
-            this.radioButton_Select_Grupe.Name = "radioButton_Select_Grupe";
-            this.radioButton_Select_Grupe.Size = new System.Drawing.Size(17, 16);
-            this.radioButton_Select_Grupe.TabIndex = 0;
-            this.radioButton_Select_Grupe.TabStop = true;
-            this.radioButton_Select_Grupe.UseVisualStyleBackColor = true;
-            // 
             // radioButton_Dashboard
             // 
             this.radioButton_Dashboard.AutoSize = true;
@@ -587,6 +590,16 @@
             this.radioButton_Dashboard.TabIndex = 1;
             this.radioButton_Dashboard.TabStop = true;
             this.radioButton_Dashboard.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_Select_Grupe
+            // 
+            this.radioButton_Select_Grupe.AutoSize = true;
+            this.radioButton_Select_Grupe.Location = new System.Drawing.Point(11, 15);
+            this.radioButton_Select_Grupe.Name = "radioButton_Select_Grupe";
+            this.radioButton_Select_Grupe.Size = new System.Drawing.Size(17, 16);
+            this.radioButton_Select_Grupe.TabIndex = 0;
+            this.radioButton_Select_Grupe.TabStop = true;
+            this.radioButton_Select_Grupe.UseVisualStyleBackColor = true;
             // 
             // Form_Orar_Viz
             // 
@@ -608,6 +621,7 @@
             this.tableLayoutPanel_Orar.ResumeLayout(false);
             this.tableLayoutPanel_Orar.PerformLayout();
             this.HeaderPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox_Back_Choice.ResumeLayout(false);
             this.groupBox_Back_Choice.PerformLayout();
@@ -650,5 +664,6 @@
         private System.Windows.Forms.GroupBox groupBox_Back_Choice;
         private System.Windows.Forms.RadioButton radioButton_Dashboard;
         private System.Windows.Forms.RadioButton radioButton_Select_Grupe;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

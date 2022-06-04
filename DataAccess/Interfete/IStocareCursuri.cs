@@ -10,11 +10,14 @@ namespace DataAccess
     public interface IStocareCursuri : IStocareFactory
     {
         List<Curs> GetCursuri();
-        List<Curs> GetCursuriByGrupa(int idGrupa, int idFacultate);
+        List<Curs> GetCursuriByGrupaSiFacultate(int idGrupa, int idFacultate);
+        List<Curs> GetCursuriByGrupa(int idGrupa);
+        List<Curs> GetCursuriByFacultate(int idFacultate);
         Curs GetCurs(int id);
 
-        bool AddCurs(Curs m);
+        bool AddCurs(Curs m, Facultate f);
 
         bool UpdateCurs(Curs m);
+        bool ValideazaExistentaCurs(Curs curs);
     }
 }

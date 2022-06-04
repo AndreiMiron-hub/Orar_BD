@@ -164,6 +164,7 @@
             this.Button_Sterge.TabIndex = 16;
             this.Button_Sterge.Text = "Sterge";
             this.Button_Sterge.UseVisualStyleBackColor = false;
+            this.Button_Sterge.Click += new System.EventHandler(this.Button_Sterge_Click);
             // 
             // Button_Modificare
             // 
@@ -182,6 +183,7 @@
             this.Button_Modificare.TabIndex = 15;
             this.Button_Modificare.Text = "Modifica";
             this.Button_Modificare.UseVisualStyleBackColor = false;
+            this.Button_Modificare.Click += new System.EventHandler(this.Button_Modificare_Click);
             // 
             // Button_Adaugare
             // 
